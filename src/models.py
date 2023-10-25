@@ -2,6 +2,14 @@ import torch.nn as nn
 import torch
 
 class DSSN(nn.Module):
+    """
+        Deep Set of Set Network
+
+        Args:
+        - inner_transform (nn.Module):  DeepSet network applied to each element of the outerset
+        - outer_transform (nn.Module):  DeepSet network applied to the outer set
+        - downstream_network (nn.Module):  Network applied to the output of the outer_transform for downstream tasks
+    """
 
     def __init__(self, inner_transform, outer_transform, downstream_network, norm = True, device = 'cpu'):
 
@@ -24,6 +32,13 @@ class DSSN(nn.Module):
         return x
      
 class SetBatchNorm(nn.Module):
+    """
+    Batch normalization specifically tailored for set data.
+
+    Note:
+        Expands the input tensor to apply 2D batch normalization and then squeezes it back.
+        Operates on 4D tensor, but casting fixes this.
+    """
 
     def __init__(self, ) -> None:
         super().__init__()
@@ -54,7 +69,6 @@ class PersLay_DDPN(PersLay):
 
     def __init__(self, rho, phi = None) -> None:
         super(PersLay_DDPN, self).__init__(rho, phi)
-
 
     def forward(self, x:torch.Tensor) -> torch.Tensor:
         # Only operate on the o-h-e og feature dimension
