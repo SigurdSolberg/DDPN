@@ -3,7 +3,7 @@ import numpy as np
 from src.distributed_homology import DistributedHomology
 from src.models import DSSN, PersLay_DDPN
 from src.training_tools import TrainingLoop, DHDataset
-from src.normalization import normalize_size
+from src.normalization import normalize_size, normalize_size_dwise
 
 from torch.optim.lr_scheduler import ExponentialLR
 import torch.nn as nn
@@ -23,11 +23,11 @@ if __name__ == '__main__':
 
     # Compute the distributed homology
     dh = DistributedHomology()
-    data = dh.fit(X, m = 10 , k = 50, normalization=[normalize_size], max_featues=150)
+    data = dh.fit(X, m = 100 , k = 25, normalization=[normalize_size_dwise], max_featues=150)
     print(f'data shape: {data.shape}')
 
     # Create a dataloader
-    train_data, val_data, train_labels, val_labels = train_test_split(data, Y, test_size=0.3, random_state=42)
+    train_data, val_data, train_labels, val_labels = train_test_split(data, Y, test_size=0.3, random_state=1)
     train_dataset = DHDataset(train_data, train_labels)
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
     val_dataset = DHDataset(val_data, val_labels)
@@ -71,9 +71,11 @@ if __name__ == '__main__':
     lr = 1e-02
     loss = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=lr)
-    scheduler = ExponentialLR(optimizer=optimizer, gamma=0.98)
+    scheduler = ExponentialLR(optimizer=optimizer, gamma=0.99)
     
     training_loop = TrainingLoop(model=model, optimizer=optimizer, loss_function=loss, device=device, scheduler=scheduler)
     training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
-    
+
+    #model.visualize_inner(val_dataset.x, val_dataset.y) 
+    model.visualize_outer(train_dataset.x, train_dataset.y)   
 

@@ -1,5 +1,7 @@
 import torch.nn as nn
 import torch
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
 
 class DSSN(nn.Module):
     """
@@ -31,6 +33,43 @@ class DSSN(nn.Module):
         x = self.downstream_network(x)
         return x
      
+    def visualize_inner(self, x, y) -> torch.Tensor:
+        """
+        Visualizes the latent space emedding produced inner transform of the DSSN.
+        [NOT WORKING]
+        """
+
+        x = torch.sum(self.inner_transform(x), dim = -2).cpu().detach().numpy()
+
+        m = x.shape[1]
+        x = x.reshape(-1, x.shape[-1])
+        x_2d = PCA(n_components=2).fit_transform(x)
+
+        for i in range(y.shape[-1]):
+            plt.scatter(*x_2d[y[:, i] == 1].T)
+        plt.savefig('inner.png')
+        plt.clf()
+        return x
+    
+    def visualize_outer(self, x, y) -> torch.Tensor:
+        """
+        Visualizes the latent space emedding produced outer transform of the DSSN.
+        """
+
+        x = torch.sum(self.inner_transform(x), dim = -2)
+        x = self.norm(x)
+        x = torch.mean(self.outer_transform(x), dim = -2).cpu().detach().numpy()
+
+        x_2d = PCA(n_components=2).fit_transform(x)
+
+        for i in range(y.shape[-1]):
+            class_samples = x_2d[y[:, i] == 1]
+            plt.scatter(*class_samples.T, label = f'{i}')
+        plt.legend()
+        plt.savefig('outer.png')
+        plt.clf()
+        return x
+
 class SetBatchNorm(nn.Module):
     """
     Batch normalization specifically tailored for set data.
