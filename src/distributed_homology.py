@@ -1,10 +1,9 @@
+from scipy.spatial.distance import pdist, squareform
 import numpy as np
 from tqdm import tqdm
-import numba
 import multiprocessing
 import itertools
 import gudhi
-import matplotlib.pyplot as plt
 import time
 
 def timer(func):
@@ -84,6 +83,9 @@ class DistributedHomology():
         for i, pointcloud in enumerate(data):
             for j, diagram in enumerate(pointcloud):
                 data[i][j] = np.pad(diagram, ((0, self.max_pd_size - len(diagram)), (0, 0)), 'constant', constant_values=0)
+
+        self.subsets = np.array(self.subsets)
+        self.compute_distance_matrices()
         return np.array(data)
 
     def compute_distributed_homology(self, X, k, m, alpha=True, max_featues = 1000000000):
@@ -153,10 +155,19 @@ class DistributedHomology():
         self.subsets.append(subsets)
         return dh
     
+    def compute_distance_matrices(self):
+        """
+        Computes the distance matrices of distances between all subsets of a point cloud.
+
+        [NOT IMPLEMENTED]
+        """
+        pass
+
 #@numba.njit
 def _get_subsets(X, k, m):
     """
     Uniformly samples m subsets of size k from X.
+    If m > len(X), subsets are sampled with replacement.
 
     Args:
         X (numpy.array):    Set of n datapoints - n x d
