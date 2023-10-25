@@ -74,6 +74,6 @@ if __name__ == '__main__':
     scheduler = ExponentialLR(optimizer=optimizer, gamma=0.98)
     
     training_loop = TrainingLoop(model=model, optimizer=optimizer, loss_function=loss, device=device, scheduler=scheduler)
-    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=500, verbose=True)
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
     
 
