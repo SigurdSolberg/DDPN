@@ -13,4 +13,4 @@ The main.py file provides an example of how to use the code from this library to
 
 ## GNN inclusion
 
-The GNN functionality can be added to the DSSN framework by simple insertion of a MessagePassingModel or other GNN-models in the 'outer_transform'-agument of the DSSN module. Additional info about edge_weights will have to be included as a paralell input, probably in the structure of an adjacency matrix.
+The GNN functionality can be added to the DSSN framework by simple insertion of a MessagePassingModel or other GNN-models in the 'outer_transform'-agument of the DSSN module. Additional info about edge_weights will have to be included as a parallel input, probably in the structure of an adjacency matrix.
