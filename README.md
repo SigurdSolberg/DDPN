@@ -1,6 +1,6 @@
 # DDPN
 
- - This repository provides tools and methodologies for computing the distributed homology of datasets. Key components include:
+This repository provides tools and methodologies for computing the distributed homology of datasets. Key components include:
 
  - Distributed Homology Computation: Methods for extracting topological features from data.
 
