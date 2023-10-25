@@ -31,7 +31,7 @@ class DistributedHomology():
         self.subsets = []
 
     @timer
-    def fit(self, X, k, n, alpha=True, normalization = [], show=False):
+    def fit(self, X, k, m, alpha=True, normalization = [], max_featues = 1000000000):
         """
         Computes the distributed homology of a dataset.
 
@@ -41,14 +41,14 @@ class DistributedHomology():
             The dataset as an array of shape (n_samples, n_features).
         k : int
             The size of the subsets.
-        n : int
+        m : int
             The number of subsets.
         alpha : bool, optional
             Whether to use the Alpha Complex instead of the Rips Complex. Default is False.
         normalization : list, optional
             A list of normalization methods to apply to the point clouds. Default is [].
-        show : bool, optional
-            Whether to plot the persistence diagrams. Default is False.
+        max_featues : int, optional
+            The maximum number of features to include in the persistence diagrams for each dimension. Default is 1000000000.
 
         Returns
         -------
@@ -72,13 +72,13 @@ class DistributedHomology():
             for normalization_method in normalization:
                 pointcloud = normalization_method(pointcloud)
 
-            if n > 1000:
+            if m > 1000:
                 cpu = multiprocessing.cpu_count()
                 with multiprocessing.Pool(cpu) as p:
-                    a = p.starmap(self.compute_distributed_homology, [[pointcloud, k, n // cpu, alpha], ] * cpu)
+                    a = p.starmap(self.compute_distributed_homology, [[pointcloud, k, m // cpu, alpha, max_featues], ] * cpu)
                 data.append(list(itertools.chain.from_iterable(a)))
             else:
-                data.append(self.compute_distributed_homology(pointcloud, k, n, alpha, show))
+                data.append(self.compute_distributed_homology(pointcloud, k, m, alpha, max_featues))
 
         # Pad diagrams with 0s to make them all the same size
         for i, pointcloud in enumerate(data):
@@ -86,7 +86,7 @@ class DistributedHomology():
                 data[i][j] = np.pad(diagram, ((0, self.max_pd_size - len(diagram)), (0, 0)), 'constant', constant_values=0)
         return np.array(data)
 
-    def compute_distributed_homology(self, X, k, n, alpha=True, show=False):
+    def compute_distributed_homology(self, X, k, m, alpha=True, max_featues = 1000000000):
         """
         Computes the distributed homology of a single point cloud.
 
@@ -96,8 +96,10 @@ class DistributedHomology():
             The point cloud as an array of shape (n_samples, n_features).
         k : int
             The size of the subsets.
-        n : int
+        m : int
             The number of subsets.
+        max_featues : int
+            The maximum number of features to include in the persistence diagrams for each dimension.
         alpha : bool
             Whether to use the Alpha Complex instead of the Rips Complex.
         show : bool
@@ -109,26 +111,39 @@ class DistributedHomology():
             A list of persistence diagrams, where each diagram is a list of arrays of (birth, death) pairs for each dimension.
         """
 
-        subsets = _get_subsets(X, k, n)
+        subsets = _get_subsets(X, k, m)
         dh = []
 
         for subset in subsets:
             filtered_complex = gudhi.AlphaComplex(subset) if alpha else gudhi.RipsComplex(points = subset)
 
+            # Calculate Persistent Homology of subset
             simplex_tree = filtered_complex.create_simplex_tree()
-            simplex_tree.compute_persistence()  # Calculate Persistent Homology of subset
+            simplex_tree.compute_persistence()
 
             pd = []
             dims = len(simplex_tree.betti_numbers())
             for dim in range(dims):
+
                 dim_features = simplex_tree.persistence_intervals_in_dimension(dim)
                 if len(dim_features) > 0:
-                    dim_features = np.c_[dim_features, dim_features[:, 1] - dim_features[:, 0]] # Add death-birth column
+
+                    # Add death-birth column
+                    dim_features = np.c_[dim_features, dim_features[:, 1] - dim_features[:, 0]]
+
+                    # Sort by death-birth column, and select max_featues most persistent features
+                    if max_featues != 1000000000:
+                        dim_features = dim_features[np.argsort(dim_features[:, 2])][-max_featues:]
+
+                    # Add one-hot encoding of dimension
                     ohe = np.zeros(shape = (len(dim_features), dims))
                     ohe[:, dim] = 1
                     dim_features = np.c_[dim_features, ohe]
+
                     pd.append(dim_features)
+
             pd[0] = np.delete(pd[0], -1, axis = 0)
+            
             pd = np.concatenate(pd)
             dh.append(pd)
 
@@ -139,20 +154,20 @@ class DistributedHomology():
         return dh
     
 #@numba.njit
-def _get_subsets(X, k, n):
+def _get_subsets(X, k, m):
     """
-    Uniformly samples n subsets of size k from X.
+    Uniformly samples m subsets of size k from X.
 
     Args:
         X (numpy.array):    Set of n datapoints - n x d
         k (int):            Size of subsets
-        n (int):            Number of subsets
+        m (int):            Number of subsets
 
     Returns:
-        numpy.array:        n subsets from X of size k - n x k x d
+        numpy.array:        m subsets from X of size k - m x k x d
     """
-    subsets = np.zeros(shape=(n, k, X.shape[-1]))
-    for i in range(n):
+    subsets = np.zeros(shape=(m, k, X.shape[-1]))
+    for i in range(m):
         if len(X) < k:
             subsets[i] = X[np.random.choice(len(X), k, replace=True)]
         else:

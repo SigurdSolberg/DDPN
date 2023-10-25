@@ -23,15 +23,15 @@ if __name__ == '__main__':
 
     # Compute the distributed homology
     dh = DistributedHomology()
-    data = dh.fit(X, n = 10 , k = 50, normalization=[normalize_size], show=False)
+    data = dh.fit(X, m = 10 , k = 50, normalization=[normalize_size], max_featues=150)
     print(f'data shape: {data.shape}')
 
     # Create a dataloader
     train_data, val_data, train_labels, val_labels = train_test_split(data, Y, test_size=0.3, random_state=42)
     train_dataset = DHDataset(train_data, train_labels)
-    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
     val_dataset = DHDataset(val_data, val_labels)
-    val_loader = DataLoader(val_dataset, batch_size=16, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True) # Use batch size 1 to verify the that the batchnorm works
 
 
     # Create a DDPN model
