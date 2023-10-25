@@ -10,3 +10,7 @@ This repository provides tools and methodologies for computing the distributed h
 
 
 The main.py file provides an example of how to use the code from this library to compute the distributed homology of a dataset of pointclouds and train a DDPN model using the resulting persistence diagrams.
+
+## GNN inclusion
+
+The GNN functionality can be added to the DSSN framework by simple insertion of a MessagePassingModel or other GNN-models in the 'outer_transform'-agument of the DSSN module. Additional info about edge_weights will have to be included as a paralell input, probably in the structure of an adjacency matrix.
