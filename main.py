@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     # Load the data
     X = np.load('data/X_clouds.npy', allow_pickle=True)[::1]
-    Y = torch.tensor(np.load('data/Y.npy'), dtype=torch.float)[::1]
+    Y = np.load('data/Y.npy')[::1]
     print(f'Number of pointclouds: {len(X)}')
 
     # Compute the distributed homology
