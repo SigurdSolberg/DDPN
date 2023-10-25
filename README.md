@@ -1,5 +1,4 @@
 # DDPN
- - Distributed Homology with Deep Set of Set Networks
 
  - This repository provides tools and methodologies for computing the distributed homology of datasets. Key components include:
 
