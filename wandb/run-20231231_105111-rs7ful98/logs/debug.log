@@ -1,0 +1,28 @@
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_setup.py:_flush():68] Configure stats pid to 79046
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_setup.py:_flush():68] Loading settings from /Users/sigurdrollsolberg/.config/wandb/settings
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_setup.py:_flush():68] Loading settings from /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/settings
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'modenet.py', 'program': '/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py'}
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:_log_setup():492] Logging user logs to /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_105111-rs7ful98/logs/debug.log
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:_log_setup():493] Logging internal logs to /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_105111-rs7ful98/logs/debug-internal.log
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:init():532] calling init triggers
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:init():538] wandb.init called with sweep_config: {}
+config: {}
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:init():588] starting backend
+2023-12-31 10:51:11,010 INFO    MainThread:79046 [wandb_init.py:init():592] setting up manager
+2023-12-31 10:51:11,013 INFO    MainThread:79046 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2023-12-31 10:51:11,015 INFO    MainThread:79046 [wandb_init.py:init():599] backend started and connected
+2023-12-31 10:51:11,019 INFO    MainThread:79046 [wandb_init.py:init():687] updated telemetry
+2023-12-31 10:51:11,065 INFO    MainThread:79046 [wandb_init.py:init():727] communicating run to backend with 60.0 second timeout
+2023-12-31 10:52:11,316 ERROR   MainThread:79046 [wandb_init.py:init():741] backend process timed out, exiting...
+encountered error: Error communicating with wandb process, exiting...
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2023-12-31 10:52:11,359 ERROR   MainThread:79046 [wandb_init.py:init():1160] error
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 1133, in init
+    run = wi.init()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/wandb_init.py", line 759, in init
+    raise error
+wandb.errors.CommError: Error communicating with wandb process, exiting...
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2023-12-31 10:52:14,381 WARNING MsgRouterThr:79046 [router.py:message_loop():77] message_loop has been closed

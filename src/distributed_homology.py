@@ -15,6 +15,33 @@ def timer(func):
         return result
     return wrapper
 
+def rotate_z(theta, x):
+    theta = np.expand_dims(theta, 1)
+    outz = np.expand_dims(x[:,:,2], 2)
+    sin_t = np.sin(theta)
+    cos_t = np.cos(theta)
+    xx = np.expand_dims(x[:,:,0], 2)
+    yy = np.expand_dims(x[:,:,1], 2)
+    outx = cos_t * xx - sin_t*yy
+    outy = sin_t * xx + cos_t*yy
+    return np.concatenate([outx, outy, outz], axis=2)
+    
+def augment(x):
+    bs = x.shape[0]
+    #rotation
+    thetas = np.random.uniform(-0.1, 0.1, [bs,1])*np.pi
+    rotated = rotate_z(thetas, x)
+    #scaling
+    scale = np.random.rand(bs,1,3)*0.45 + 0.8
+    return rotated*scale
+
+def standardize(x):
+    clipper = np.mean(np.abs(x), (1,2), keepdims=True)
+    z = np.clip(x, -100*clipper, 100*clipper)
+    mean = np.mean(z, (1,2), keepdims=True)
+    std = np.std(z, (1,2), keepdims=True)
+    return (z-mean)/std
+
 class DistributedHomology():
     """
     Computes the distributed homology of a dataset using either the Alpha Complex or Rips Complex.
@@ -162,6 +189,29 @@ class DistributedHomology():
         [NOT IMPLEMENTED]
         """
         pass
+
+    def get_subsets(self, X, k, m, alpha=True, normalization = [], disable = False):
+        self.subsets = []
+
+        do_standardize = True
+        do_augmentation = True
+
+        self.prep1 = standardize if do_standardize else lambda x: x
+        self.prep2 = (lambda x: augment(self.prep1(x))) if do_augmentation else self.prep1
+
+        X = self.prep2(np.array(X))
+
+        # Compute DH for each pointcloud
+        for pointcloud in tqdm(X, desc="Processing", total=len(X), disable=disable):
+
+            # Normalize pointcloud
+            for normalization_method in normalization:
+                pointcloud = normalization_method(pointcloud)
+
+            subsets = _get_subsets(pointcloud, k, m)
+            self.subsets.append(subsets)
+        self.subsets = np.array(self.subsets)
+        return self.subsets
 
 #@numba.njit
 def _get_subsets(X, k, m):

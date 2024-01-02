@@ -1,0 +1,30 @@
+
+Epoch 0: Train loss: 0.0338 | Val loss: 0.0394 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.010 | Time: 3.591
+Epoch 5: Train loss: 0.0339 | Val loss: 0.0389 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 58.478
+Epoch 10: Train loss: 0.0338 | Val loss: 0.0393 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 11.348
+Epoch 15: Train loss: 0.0337 | Val loss: 0.0400 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 11.353
+Epoch 20: Train loss: 0.0338 | Val loss: 0.0403 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.008 | Time: 11.381
+Epoch 25: Train loss: 0.0338 | Val loss: 0.0396 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.008 | Time: 11.515
+Epoch 30: Train loss: 0.0337 | Val loss: 0.0393 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.007 | Time: 47.766
+Epoch 35: Train loss: 0.0337 | Val loss: 0.0396 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.007 | Time: 11.670
+Epoch 40: Train loss: 0.0337 | Val loss: 0.0395 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.007 | Time: 11.488
+Epoch 45: Train loss: 0.0337 | Val loss: 0.0398 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.006 | Time: 11.546
+Epoch 50: Train loss: 0.0337 | Val loss: 0.0397 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.006 | Time: 11.474
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 112, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 128, in train
+    self.model.visualize_outer(
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 64, in visualize_outer
+    x_2d = UMAP(n_components=2).fit_transform(x)#PCA(n_components=2).fit_transform(x)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 2772, in fit_transform
+    self.fit(X, y)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 2684, in fit
+    self.embedding_, aux_data = self._fit_embed_data(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 2717, in _fit_embed_data
+    return simplicial_set_embedding(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 1156, in simplicial_set_embedding
+    embedding = optimize_layout_euclidean(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/layouts.py", line 369, in optimize_layout_euclidean
+    optimize_fn(
+KeyboardInterrupt

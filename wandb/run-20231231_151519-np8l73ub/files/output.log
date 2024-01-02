@@ -1,0 +1,57 @@
+
+Epoch 0: Train loss: 0.0264 | Val loss: 0.0333 | Train accuracy: 0.395 | Val accuracy: 0.217 | LR: 0.010 | Time: 170.484
+Epoch 5: Train loss: 0.0132 | Val loss: 0.0176 | Train accuracy: 0.704 | Val accuracy: 0.634 | LR: 0.009 | Time: 962.931
+Epoch 10: Train loss: 0.0086 | Val loss: 0.0139 | Train accuracy: 0.823 | Val accuracy: 0.749 | LR: 0.009 | Time: 628.069
+Epoch 15: Train loss: 0.0079 | Val loss: 0.0117 | Train accuracy: 0.811 | Val accuracy: 0.748 | LR: 0.009 | Time: 626.089
+Epoch 20: Train loss: 0.0071 | Val loss: 0.0127 | Train accuracy: 0.844 | Val accuracy: 0.748 | LR: 0.008 | Time: 626.746
+Epoch 25: Train loss: 0.0068 | Val loss: 0.0121 | Train accuracy: 0.851 | Val accuracy: 0.768 | LR: 0.008 | Time: 625.856
+Epoch 30: Train loss: 0.0043 | Val loss: 0.0084 | Train accuracy: 0.904 | Val accuracy: 0.838 | LR: 0.007 | Time: 956.889
+Epoch 35: Train loss: 0.0034 | Val loss: 0.0071 | Train accuracy: 0.917 | Val accuracy: 0.857 | LR: 0.007 | Time: 626.189
+Epoch 40: Train loss: 0.0035 | Val loss: 0.0084 | Train accuracy: 0.917 | Val accuracy: 0.838 | LR: 0.007 | Time: 626.333
+Epoch 45: Train loss: 0.0035 | Val loss: 0.0072 | Train accuracy: 0.919 | Val accuracy: 0.858 | LR: 0.006 | Time: 624.426
+Epoch 50: Train loss: 0.0032 | Val loss: 0.0067 | Train accuracy: 0.927 | Val accuracy: 0.871 | LR: 0.006 | Time: 624.750
+Epoch 55: Train loss: 0.0028 | Val loss: 0.0070 | Train accuracy: 0.930 | Val accuracy: 0.861 | LR: 0.006 | Time: 941.202
+Epoch 60: Train loss: 0.0024 | Val loss: 0.0068 | Train accuracy: 0.944 | Val accuracy: 0.874 | LR: 0.005 | Time: 625.132
+Epoch 65: Train loss: 0.0028 | Val loss: 0.0069 | Train accuracy: 0.933 | Val accuracy: 0.876 | LR: 0.005 | Time: 625.257
+Epoch 70: Train loss: 0.0025 | Val loss: 0.0070 | Train accuracy: 0.939 | Val accuracy: 0.867 | LR: 0.005 | Time: 625.856
+Epoch 75: Train loss: 0.0025 | Val loss: 0.0077 | Train accuracy: 0.938 | Val accuracy: 0.850 | LR: 0.005 | Time: 626.410
+Epoch 80: Train loss: 0.0026 | Val loss: 0.0079 | Train accuracy: 0.938 | Val accuracy: 0.852 | LR: 0.004 | Time: 943.461
+Epoch 85: Train loss: 0.0023 | Val loss: 0.0069 | Train accuracy: 0.941 | Val accuracy: 0.865 | LR: 0.004 | Time: 624.991
+Epoch 90: Train loss: 0.0018 | Val loss: 0.0065 | Train accuracy: 0.954 | Val accuracy: 0.877 | LR: 0.004 | Time: 625.651
+Epoch 95: Train loss: 0.0023 | Val loss: 0.0058 | Train accuracy: 0.943 | Val accuracy: 0.879 | LR: 0.004 | Time: 626.661
+Epoch 100: Train loss: 0.0018 | Val loss: 0.0063 | Train accuracy: 0.955 | Val accuracy: 0.859 | LR: 0.004 | Time: 626.502
+Epoch 105: Train loss: 0.0018 | Val loss: 0.0071 | Train accuracy: 0.957 | Val accuracy: 0.871 | LR: 0.003 | Time: 938.640
+Epoch 110: Train loss: 0.0018 | Val loss: 0.0063 | Train accuracy: 0.958 | Val accuracy: 0.885 | LR: 0.003 | Time: 626.640
+Epoch 115: Train loss: 0.0015 | Val loss: 0.0064 | Train accuracy: 0.960 | Val accuracy: 0.882 | LR: 0.003 | Time: 626.292
+Epoch 120: Train loss: 0.0018 | Val loss: 0.0073 | Train accuracy: 0.955 | Val accuracy: 0.867 | LR: 0.003 | Time: 625.325
+Epoch 125: Train loss: 0.0021 | Val loss: 0.0071 | Train accuracy: 0.947 | Val accuracy: 0.873 | LR: 0.003 | Time: 624.997
+Epoch 130: Train loss: 0.0013 | Val loss: 0.0063 | Train accuracy: 0.967 | Val accuracy: 0.889 | LR: 0.003 | Time: 942.876
+Epoch 135: Train loss: 0.0012 | Val loss: 0.0066 | Train accuracy: 0.969 | Val accuracy: 0.882 | LR: 0.003 | Time: 626.408
+Epoch 140: Train loss: 0.0012 | Val loss: 0.0065 | Train accuracy: 0.968 | Val accuracy: 0.878 | LR: 0.002 | Time: 625.362
+Epoch 145: Train loss: 0.0013 | Val loss: 0.0065 | Train accuracy: 0.967 | Val accuracy: 0.873 | LR: 0.002 | Time: 625.602
+Epoch 150: Train loss: 0.0013 | Val loss: 0.0076 | Train accuracy: 0.968 | Val accuracy: 0.889 | LR: 0.002 | Time: 625.335
+Epoch 155: Train loss: 0.0014 | Val loss: 0.0072 | Train accuracy: 0.967 | Val accuracy: 0.874 | LR: 0.002 | Time: 935.071
+Epoch 160: Train loss: 0.0011 | Val loss: 0.0066 | Train accuracy: 0.973 | Val accuracy: 0.874 | LR: 0.002 | Time: 624.818
+Epoch 165: Train loss: 0.0012 | Val loss: 0.0075 | Train accuracy: 0.968 | Val accuracy: 0.869 | LR: 0.002 | Time: 625.291
+Epoch 170: Train loss: 0.0011 | Val loss: 0.0078 | Train accuracy: 0.972 | Val accuracy: 0.879 | LR: 0.002 | Time: 625.120
+Epoch 175: Train loss: 0.0010 | Val loss: 0.0072 | Train accuracy: 0.976 | Val accuracy: 0.892 | LR: 0.002 | Time: 624.441
+Epoch 180: Train loss: 0.0012 | Val loss: 0.0081 | Train accuracy: 0.966 | Val accuracy: 0.879 | LR: 0.002 | Time: 936.655
+Epoch 185: Train loss: 0.0010 | Val loss: 0.0077 | Train accuracy: 0.976 | Val accuracy: 0.887 | LR: 0.002 | Time: 626.555
+Epoch 190: Train loss: 0.0009 | Val loss: 0.0073 | Train accuracy: 0.977 | Val accuracy: 0.884 | LR: 0.001 | Time: 625.486
+Epoch 195: Train loss: 0.0009 | Val loss: 0.0078 | Train accuracy: 0.983 | Val accuracy: 0.885 | LR: 0.001 | Time: 625.878
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 128, in <module>
+    model.visualize_outer(train_dataset.x, train_dataset.y)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 61, in visualize_outer
+    x = self.norm(x)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 92, in forward
+    x = self.norm(x)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 138, in forward
+    self._check_input_dim(input)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 410, in _check_input_dim
+    raise ValueError("expected 4D input (got {}D input)".format(input.dim()))
+ValueError: expected 4D input (got 3D input)

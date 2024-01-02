@@ -1,0 +1,31 @@
+
+Epoch 0: Train loss: 0.0237 | Val loss: 0.0291 | Train accuracy: 0.417 | Val accuracy: 0.347 | LR: 0.010 | Time: 14.439
+Epoch 5: Train loss: 0.0104 | Val loss: 0.0152 | Train accuracy: 0.756 | Val accuracy: 0.645 | LR: 0.009 | Time: 64.515
+Epoch 10: Train loss: 0.0092 | Val loss: 0.0132 | Train accuracy: 0.784 | Val accuracy: 0.699 | LR: 0.009 | Time: 46.617
+Epoch 15: Train loss: 0.0097 | Val loss: 0.0164 | Train accuracy: 0.780 | Val accuracy: 0.650 | LR: 0.009 | Time: 45.663
+Epoch 20: Train loss: 0.0078 | Val loss: 0.0126 | Train accuracy: 0.831 | Val accuracy: 0.742 | LR: 0.008 | Time: 45.959
+Epoch 25: Train loss: 0.0060 | Val loss: 0.0094 | Train accuracy: 0.856 | Val accuracy: 0.775 | LR: 0.008 | Time: 45.429
+Epoch 30: Train loss: 0.0057 | Val loss: 0.0087 | Train accuracy: 0.870 | Val accuracy: 0.794 | LR: 0.007 | Time: 59.445
+Epoch 35: Train loss: 0.0053 | Val loss: 0.0086 | Train accuracy: 0.881 | Val accuracy: 0.811 | LR: 0.007 | Time: 45.644
+Epoch 40: Train loss: 0.0048 | Val loss: 0.0093 | Train accuracy: 0.885 | Val accuracy: 0.805 | LR: 0.007 | Time: 45.276
+Epoch 45: Train loss: 0.0049 | Val loss: 0.0098 | Train accuracy: 0.893 | Val accuracy: 0.792 | LR: 0.006 | Time: 45.807
+Epoch 50: Train loss: 0.0051 | Val loss: 0.0091 | Train accuracy: 0.881 | Val accuracy: 0.807 | LR: 0.006 | Time: 45.526
+Epoch 55: Train loss: 0.0045 | Val loss: 0.0083 | Train accuracy: 0.895 | Val accuracy: 0.817 | LR: 0.006 | Time: 59.662
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 130, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 105, in train
+    self.optimizer.step()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/lr_scheduler.py", line 68, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/optimizer.py", line 140, in wrapper
+    out = func(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/optimizer.py", line 23, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/adam.py", line 234, in step
+    adam(params_with_grad,
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/adam.py", line 300, in adam
+    func(params,
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/optim/adam.py", line 363, in _single_tensor_adam
+    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+KeyboardInterrupt

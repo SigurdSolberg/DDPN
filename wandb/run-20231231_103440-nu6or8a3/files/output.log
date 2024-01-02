@@ -1,0 +1,35 @@
+
+Epoch 0: Train loss: 0.0226 | Val loss: 0.0283 | Train accuracy: 0.506 | Val accuracy: 0.376 | LR: 0.010 | Time: 2.355
+Epoch 5: Train loss: 0.0185 | Val loss: 0.0232 | Train accuracy: 0.592 | Val accuracy: 0.523 | LR: 0.009 | Time: 23.727
+Epoch 10: Train loss: 0.0180 | Val loss: 0.0234 | Train accuracy: 0.608 | Val accuracy: 0.511 | LR: 0.009 | Time: 7.091
+Epoch 15: Train loss: 0.0167 | Val loss: 0.0222 | Train accuracy: 0.640 | Val accuracy: 0.544 | LR: 0.009 | Time: 6.993
+Epoch 20: Train loss: 0.0170 | Val loss: 0.0217 | Train accuracy: 0.638 | Val accuracy: 0.561 | LR: 0.008 | Time: 6.783
+Epoch 25: Train loss: 0.0166 | Val loss: 0.0221 | Train accuracy: 0.638 | Val accuracy: 0.547 | LR: 0.008 | Time: 7.164
+Epoch 30: Train loss: 0.0169 | Val loss: 0.0214 | Train accuracy: 0.633 | Val accuracy: 0.567 | LR: 0.007 | Time: 19.230
+Epoch 35: Train loss: 0.0157 | Val loss: 0.0198 | Train accuracy: 0.651 | Val accuracy: 0.546 | LR: 0.007 | Time: 6.632
+Epoch 40: Train loss: 0.0147 | Val loss: 0.0194 | Train accuracy: 0.672 | Val accuracy: 0.581 | LR: 0.007 | Time: 6.804
+Epoch 45: Train loss: 0.0150 | Val loss: 0.0214 | Train accuracy: 0.664 | Val accuracy: 0.552 | LR: 0.006 | Time: 6.681
+Epoch 50: Train loss: 0.0147 | Val loss: 0.0187 | Train accuracy: 0.680 | Val accuracy: 0.591 | LR: 0.006 | Time: 6.583
+Epoch 55: Train loss: 0.0143 | Val loss: 0.0202 | Train accuracy: 0.688 | Val accuracy: 0.591 | LR: 0.006 | Time: 18.990
+Epoch 60: Train loss: 0.0145 | Val loss: 0.0184 | Train accuracy: 0.682 | Val accuracy: 0.589 | LR: 0.005 | Time: 6.682
+Epoch 65: Train loss: 0.0140 | Val loss: 0.0187 | Train accuracy: 0.692 | Val accuracy: 0.593 | LR: 0.005 | Time: 6.625
+Epoch 70: Train loss: 0.0147 | Val loss: 0.0197 | Train accuracy: 0.674 | Val accuracy: 0.585 | LR: 0.005 | Time: 6.607
+Epoch 75: Train loss: 0.0139 | Val loss: 0.0189 | Train accuracy: 0.687 | Val accuracy: 0.591 | LR: 0.005 | Time: 6.702
+Epoch 80: Train loss: 0.0137 | Val loss: 0.0196 | Train accuracy: 0.697 | Val accuracy: 0.573 | LR: 0.004 | Time: 19.181
+Epoch 85: Train loss: 0.0141 | Val loss: 0.0181 | Train accuracy: 0.697 | Val accuracy: 0.605 | LR: 0.004 | Time: 6.738
+Epoch 90: Train loss: 0.0140 | Val loss: 0.0189 | Train accuracy: 0.685 | Val accuracy: 0.593 | LR: 0.004 | Time: 6.681
+Epoch 95: Train loss: 0.0138 | Val loss: 0.0179 | Train accuracy: 0.692 | Val accuracy: 0.604 | LR: 0.004 | Time: 6.647
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 112, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 99, in train
+    data = torch.tensor(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True), dtype= torch.float32, device=self.device)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 202, in get_subsets
+    X = self.prep2(np.array(X))
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 200, in <lambda>
+    self.prep2 = (lambda x: augment(self.prep1(x))) if do_augmentation else self.prep1
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 33, in augment
+    rotated = rotate_z(thetas, x)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 25, in rotate_z
+    outx = cos_t * xx - sin_t*yy
+KeyboardInterrupt

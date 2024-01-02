@@ -1,0 +1,45 @@
+
+Epoch 0: Train loss: 0.0161 | Val loss: 0.0236 | Train accuracy: 0.648 | Val accuracy: 0.504 | LR: 0.010 | Time: 3.393
+Epoch 5: Train loss: 0.0128 | Val loss: 0.0184 | Train accuracy: 0.754 | Val accuracy: 0.660 | LR: 0.009 | Time: 25.504
+Epoch 10: Train loss: 0.0086 | Val loss: 0.0135 | Train accuracy: 0.799 | Val accuracy: 0.706 | LR: 0.009 | Time: 11.300
+Epoch 15: Train loss: 0.0074 | Val loss: 0.0125 | Train accuracy: 0.832 | Val accuracy: 0.739 | LR: 0.009 | Time: 10.581
+Epoch 20: Train loss: 0.0076 | Val loss: 0.0137 | Train accuracy: 0.839 | Val accuracy: 0.748 | LR: 0.008 | Time: 10.011
+Epoch 25: Train loss: 0.0078 | Val loss: 0.0120 | Train accuracy: 0.829 | Val accuracy: 0.768 | LR: 0.008 | Time: 10.557
+Epoch 30: Train loss: 0.0063 | Val loss: 0.0111 | Train accuracy: 0.849 | Val accuracy: 0.770 | LR: 0.007 | Time: 21.629
+Epoch 35: Train loss: 0.0053 | Val loss: 0.0100 | Train accuracy: 0.878 | Val accuracy: 0.796 | LR: 0.007 | Time: 10.744
+Epoch 40: Train loss: 0.0055 | Val loss: 0.0100 | Train accuracy: 0.871 | Val accuracy: 0.778 | LR: 0.007 | Time: 11.269
+Epoch 45: Train loss: 0.0044 | Val loss: 0.0100 | Train accuracy: 0.897 | Val accuracy: 0.792 | LR: 0.006 | Time: 10.947
+Epoch 50: Train loss: 0.0044 | Val loss: 0.0092 | Train accuracy: 0.890 | Val accuracy: 0.798 | LR: 0.006 | Time: 10.616
+Epoch 55: Train loss: 0.0047 | Val loss: 0.0102 | Train accuracy: 0.895 | Val accuracy: 0.783 | LR: 0.006 | Time: 21.029
+Epoch 60: Train loss: 0.0047 | Val loss: 0.0118 | Train accuracy: 0.891 | Val accuracy: 0.779 | LR: 0.005 | Time: 10.177
+Epoch 65: Train loss: 0.0040 | Val loss: 0.0089 | Train accuracy: 0.907 | Val accuracy: 0.805 | LR: 0.005 | Time: 10.523
+Epoch 70: Train loss: 0.0044 | Val loss: 0.0096 | Train accuracy: 0.894 | Val accuracy: 0.789 | LR: 0.005 | Time: 10.321
+Epoch 75: Train loss: 0.0039 | Val loss: 0.0107 | Train accuracy: 0.902 | Val accuracy: 0.783 | LR: 0.005 | Time: 10.226
+Epoch 80: Train loss: 0.0039 | Val loss: 0.0096 | Train accuracy: 0.906 | Val accuracy: 0.794 | LR: 0.004 | Time: 20.636
+Epoch 85: Train loss: 0.0040 | Val loss: 0.0091 | Train accuracy: 0.904 | Val accuracy: 0.795 | LR: 0.004 | Time: 10.055
+Epoch 90: Train loss: 0.0037 | Val loss: 0.0106 | Train accuracy: 0.913 | Val accuracy: 0.807 | LR: 0.004 | Time: 10.315
+Epoch 95: Train loss: 0.0033 | Val loss: 0.0113 | Train accuracy: 0.922 | Val accuracy: 0.794 | LR: 0.004 | Time: 11.177
+Epoch 100: Train loss: 0.0034 | Val loss: 0.0102 | Train accuracy: 0.914 | Val accuracy: 0.794 | LR: 0.004 | Time: 11.330
+Epoch 105: Train loss: 0.0029 | Val loss: 0.0098 | Train accuracy: 0.929 | Val accuracy: 0.807 | LR: 0.003 | Time: 21.201
+Epoch 110: Train loss: 0.0030 | Val loss: 0.0089 | Train accuracy: 0.931 | Val accuracy: 0.813 | LR: 0.003 | Time: 10.352
+Epoch 115: Train loss: 0.0030 | Val loss: 0.0098 | Train accuracy: 0.927 | Val accuracy: 0.808 | LR: 0.003 | Time: 10.164
+Epoch 120: Train loss: 0.0029 | Val loss: 0.0104 | Train accuracy: 0.928 | Val accuracy: 0.804 | LR: 0.003 | Time: 10.324
+Epoch 125: Train loss: 0.0030 | Val loss: 0.0117 | Train accuracy: 0.929 | Val accuracy: 0.806 | LR: 0.003 | Time: 10.127
+Epoch 130: Train loss: 0.0029 | Val loss: 0.0098 | Train accuracy: 0.925 | Val accuracy: 0.808 | LR: 0.003 | Time: 21.280
+Epoch 135: Train loss: 0.0030 | Val loss: 0.0101 | Train accuracy: 0.922 | Val accuracy: 0.812 | LR: 0.003 | Time: 10.793
+Epoch 140: Train loss: 0.0030 | Val loss: 0.0115 | Train accuracy: 0.930 | Val accuracy: 0.807 | LR: 0.002 | Time: 11.340
+Epoch 145: Train loss: 0.0032 | Val loss: 0.0108 | Train accuracy: 0.923 | Val accuracy: 0.812 | LR: 0.002 | Time: 10.672
+Epoch 150: Train loss: 0.0027 | Val loss: 0.0105 | Train accuracy: 0.934 | Val accuracy: 0.819 | LR: 0.002 | Time: 10.729
+Epoch 155: Train loss: 0.0025 | Val loss: 0.0107 | Train accuracy: 0.939 | Val accuracy: 0.816 | LR: 0.002 | Time: 21.349
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 112, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 114, in train
+    train_loss, train_accuracy = self.test(train_loader, sample = True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 144, in test
+    data = torch.tensor(np.array(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True)), dtype= torch.float32, device=self.device)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 211, in get_subsets
+    subsets = _get_subsets(pointcloud, k, m)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/distributed_homology.py", line 235, in _get_subsets
+    subsets[i] = X[np.random.choice(len(X), k, replace=False)]
+KeyboardInterrupt

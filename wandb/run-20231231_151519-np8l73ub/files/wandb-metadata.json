@@ -1,0 +1,42 @@
+{
+    "os": "macOS-10.16-x86_64-i386-64bit",
+    "python": "3.9.16",
+    "heartbeatAt": "2023-12-31T14:15:23.137882",
+    "startedAt": "2023-12-31T14:15:19.377069",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py",
+    "codePath": "modenet.py",
+    "git": {
+        "remote": "https://github.com/SigurdSolberg/DDPN.git",
+        "commit": "45da2ba23e899a2819a29299d377496566738ed4"
+    },
+    "email": "sigroll@gmail.com",
+    "root": "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN",
+    "host": "Sigurds-MacBook-Pro.local",
+    "username": "sigurdrollsolberg",
+    "executable": "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/bin/python",
+    "cpu_count": 10,
+    "cpu_count_logical": 10,
+    "cpu_freq": {
+        "current": 2400,
+        "min": 2400,
+        "max": 2400
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2400,
+            "min": 2400,
+            "max": 2400
+        }
+    ],
+    "disk": {
+        "total": 926.3517189025879,
+        "used": 323.8929634094238
+    },
+    "memory": {
+        "total": 32.0
+    }
+}

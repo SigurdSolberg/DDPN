@@ -1,0 +1,72 @@
+2023-12-31 10:30:30,553 INFO    StreamThr :75929 [internal.py:wandb_internal():87] W&B internal server running at pid: 75929, started at: 2023-12-31 10:30:30.551708
+2023-12-31 10:30:30,553 DEBUG   HandlerThread:75929 [handler.py:handle_request():144] handle_request: status
+2023-12-31 10:30:30,570 INFO    WriterThread:75929 [datastore.py:open_for_write():85] open: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_103030-s9m28o3a/run-s9m28o3a.wandb
+2023-12-31 10:30:30,570 DEBUG   SenderThread:75929 [sender.py:send():336] send: header
+2023-12-31 10:30:30,634 DEBUG   SenderThread:75929 [sender.py:send():336] send: run
+2023-12-31 10:30:31,431 ERROR   SenderThread:75929 [internal_api.py:execute():245] 404 response executing GraphQL.
+2023-12-31 10:30:31,431 ERROR   SenderThread:75929 [internal_api.py:execute():246] {"errors":[{"message":"project not found","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2023-12-31 10:30:31,636 INFO    WriterThread:75929 [datastore.py:close():299] close: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_103030-s9m28o3a/run-s9m28o3a.wandb
+2023-12-31 10:30:31,639 INFO    HandlerThread:75929 [handler.py:finish():841] shutting down handler
+2023-12-31 10:30:31,639 ERROR   StreamThr :75929 [internal.py:wandb_internal():175] Thread SenderThread:
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 242, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 1593, in upsert_run
+    response = self.gql(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 214, in gql
+    ret = self._retry_gql(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/util.py", line 1066, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/util.py", line 1013, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 49, in run
+    self._run()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_util.py", line 100, in _run
+    self._process(record)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal.py", line 329, in _process
+    self._sm.send(record)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 343, in send
+    send_handler(record)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 929, in send_run
+    self._init_run(run, config_value_dict)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/sender.py", line 957, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 64, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 1593, in upsert_run
+    response = self.gql(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 214, in gql
+    ret = self._retry_gql(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 147, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/util.py", line 1066, in check_retry_fn
+    return fallback_retry_fn(e)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/util.py", line 1013, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access

@@ -1,6 +1,7 @@
 import torch.nn as nn
 import torch
 from sklearn.decomposition import PCA
+from umap import UMAP
 import matplotlib.pyplot as plt
 
 class DSSN(nn.Module):
@@ -51,7 +52,7 @@ class DSSN(nn.Module):
         plt.clf()
         return x
     
-    def visualize_outer(self, x, y) -> torch.Tensor:
+    def visualize_outer(self, x, y, epoch = -1) -> torch.Tensor:
         """
         Visualizes the latent space emedding produced outer transform of the DSSN.
         """
@@ -60,13 +61,16 @@ class DSSN(nn.Module):
         x = self.norm(x)
         x = torch.mean(self.outer_transform(x), dim = -2).cpu().detach().numpy()
 
-        x_2d = PCA(n_components=2).fit_transform(x)
+        x_2d = UMAP(n_components=2).fit_transform(x)#PCA(n_components=2).fit_transform(x)
 
         for i in range(y.shape[-1]):
             class_samples = x_2d[y[:, i] == 1]
             plt.scatter(*class_samples.T, label = f'{i}')
         plt.legend()
-        plt.savefig('outer.png')
+
+        epoch = epoch if epoch >= 0 else "final"
+        path = f'output/outer_{epoch}.png'
+        plt.savefig(path)
         plt.clf()
         return x
 
@@ -88,6 +92,17 @@ class SetBatchNorm(nn.Module):
         x = self.norm(x)
         x = x.squeeze(1)
         return x
+
+class Norm(nn.Module):
+    """
+    Normalization layer for set data.
+    """
+
+    def __init__(self, ) -> None:
+        super().__init__()
+
+    def forward(self, x):
+        return x - torch.mean(x, dim = -2, keepdim = True)
 
 class PersLay(nn.Module):
     

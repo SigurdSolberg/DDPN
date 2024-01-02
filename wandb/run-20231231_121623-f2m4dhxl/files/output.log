@@ -1,0 +1,50 @@
+
+Epoch 0: Train loss: 0.0258 | Val loss: 0.0313 | Train accuracy: 0.372 | Val accuracy: 0.249 | LR: 0.010 | Time: 44.903
+Epoch 5: Train loss: 0.0109 | Val loss: 0.0148 | Train accuracy: 0.751 | Val accuracy: 0.673 | LR: 0.009 | Time: 202.351
+Epoch 10: Train loss: 0.0078 | Val loss: 0.0117 | Train accuracy: 0.838 | Val accuracy: 0.750 | LR: 0.009 | Time: 160.452
+Epoch 15: Train loss: 0.0074 | Val loss: 0.0107 | Train accuracy: 0.832 | Val accuracy: 0.765 | LR: 0.009 | Time: 163.185
+Epoch 20: Train loss: 0.0065 | Val loss: 0.0093 | Train accuracy: 0.850 | Val accuracy: 0.775 | LR: 0.008 | Time: 158.555
+Epoch 25: Train loss: 0.0049 | Val loss: 0.0094 | Train accuracy: 0.894 | Val accuracy: 0.812 | LR: 0.008 | Time: 161.722
+Epoch 30: Train loss: 0.0047 | Val loss: 0.0098 | Train accuracy: 0.894 | Val accuracy: 0.802 | LR: 0.007 | Time: 195.560
+Epoch 35: Train loss: 0.0040 | Val loss: 0.0089 | Train accuracy: 0.909 | Val accuracy: 0.811 | LR: 0.007 | Time: 163.976
+Epoch 40: Train loss: 0.0035 | Val loss: 0.0082 | Train accuracy: 0.908 | Val accuracy: 0.831 | LR: 0.007 | Time: 159.235
+Epoch 45: Train loss: 0.0041 | Val loss: 0.0095 | Train accuracy: 0.906 | Val accuracy: 0.808 | LR: 0.006 | Time: 159.884
+Epoch 50: Train loss: 0.0029 | Val loss: 0.0066 | Train accuracy: 0.935 | Val accuracy: 0.861 | LR: 0.006 | Time: 159.021
+Epoch 55: Train loss: 0.0027 | Val loss: 0.0061 | Train accuracy: 0.935 | Val accuracy: 0.876 | LR: 0.006 | Time: 193.960
+Epoch 60: Train loss: 0.0025 | Val loss: 0.0067 | Train accuracy: 0.941 | Val accuracy: 0.869 | LR: 0.005 | Time: 162.335
+Epoch 65: Train loss: 0.0022 | Val loss: 0.0061 | Train accuracy: 0.949 | Val accuracy: 0.872 | LR: 0.005 | Time: 161.653
+Epoch 70: Train loss: 0.0022 | Val loss: 0.0056 | Train accuracy: 0.947 | Val accuracy: 0.882 | LR: 0.005 | Time: 162.090
+Epoch 75: Train loss: 0.0028 | Val loss: 0.0088 | Train accuracy: 0.937 | Val accuracy: 0.843 | LR: 0.005 | Time: 159.743
+Epoch 80: Train loss: 0.0028 | Val loss: 0.0074 | Train accuracy: 0.934 | Val accuracy: 0.847 | LR: 0.004 | Time: 191.519
+Epoch 85: Train loss: 0.0020 | Val loss: 0.0064 | Train accuracy: 0.953 | Val accuracy: 0.880 | LR: 0.004 | Time: 159.003
+Epoch 90: Train loss: 0.0024 | Val loss: 0.0058 | Train accuracy: 0.944 | Val accuracy: 0.880 | LR: 0.004 | Time: 159.291
+Epoch 95: Train loss: 0.0018 | Val loss: 0.0071 | Train accuracy: 0.957 | Val accuracy: 0.870 | LR: 0.004 | Time: 158.287
+Epoch 100: Train loss: 0.0024 | Val loss: 0.0068 | Train accuracy: 0.941 | Val accuracy: 0.880 | LR: 0.004 | Time: 203.008
+Epoch 105: Train loss: 0.0019 | Val loss: 0.0070 | Train accuracy: 0.955 | Val accuracy: 0.863 | LR: 0.003 | Time: 191.393
+Epoch 110: Train loss: 0.0018 | Val loss: 0.0070 | Train accuracy: 0.958 | Val accuracy: 0.867 | LR: 0.003 | Time: 159.469
+Epoch 115: Train loss: 0.0021 | Val loss: 0.0074 | Train accuracy: 0.946 | Val accuracy: 0.874 | LR: 0.003 | Time: 158.971
+Epoch 120: Train loss: 0.0016 | Val loss: 0.0066 | Train accuracy: 0.962 | Val accuracy: 0.885 | LR: 0.003 | Time: 165.525
+Epoch 125: Train loss: 0.0015 | Val loss: 0.0073 | Train accuracy: 0.963 | Val accuracy: 0.863 | LR: 0.003 | Time: 158.878
+Epoch 130: Train loss: 0.0013 | Val loss: 0.0075 | Train accuracy: 0.968 | Val accuracy: 0.867 | LR: 0.003 | Time: 193.987
+Epoch 135: Train loss: 0.0015 | Val loss: 0.0068 | Train accuracy: 0.963 | Val accuracy: 0.882 | LR: 0.003 | Time: 159.042
+Epoch 140: Train loss: 0.0017 | Val loss: 0.0083 | Train accuracy: 0.958 | Val accuracy: 0.860 | LR: 0.002 | Time: 158.878
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 126, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 102, in train
+    output = self.model(data)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 31, in forward
+    x = torch.sum(self.inner_transform(x), dim = -2)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 516, in forward
+    return F.elu(input, self.alpha, self.inplace)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/functional.py", line 1546, in elu
+    result = torch._C._nn.elu_(input, alpha)
+KeyboardInterrupt

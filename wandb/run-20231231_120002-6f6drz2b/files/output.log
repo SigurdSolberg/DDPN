@@ -1,0 +1,40 @@
+
+Epoch 0: Train loss: 0.0346 | Val loss: 0.0376 | Train accuracy: 0.226 | Val accuracy: 0.130 | LR: 0.010 | Time: 15.169
+Epoch 5: Train loss: 0.0247 | Val loss: 0.0299 | Train accuracy: 0.434 | Val accuracy: 0.284 | LR: 0.009 | Time: 65.766
+Epoch 10: Train loss: 0.0194 | Val loss: 0.0254 | Train accuracy: 0.558 | Val accuracy: 0.402 | LR: 0.009 | Time: 46.852
+Epoch 15: Train loss: 0.0142 | Val loss: 0.0202 | Train accuracy: 0.690 | Val accuracy: 0.563 | LR: 0.009 | Time: 46.755
+Epoch 20: Train loss: 0.0116 | Val loss: 0.0179 | Train accuracy: 0.739 | Val accuracy: 0.616 | LR: 0.008 | Time: 46.757
+Epoch 25: Train loss: 0.0111 | Val loss: 0.0164 | Train accuracy: 0.755 | Val accuracy: 0.632 | LR: 0.008 | Time: 46.811
+Epoch 30: Train loss: 0.0095 | Val loss: 0.0146 | Train accuracy: 0.785 | Val accuracy: 0.699 | LR: 0.007 | Time: 63.954
+Epoch 35: Train loss: 0.0088 | Val loss: 0.0131 | Train accuracy: 0.809 | Val accuracy: 0.725 | LR: 0.007 | Time: 49.135
+Epoch 40: Train loss: 0.0097 | Val loss: 0.0152 | Train accuracy: 0.765 | Val accuracy: 0.633 | LR: 0.007 | Time: 48.456
+Epoch 45: Train loss: 0.0081 | Val loss: 0.0121 | Train accuracy: 0.815 | Val accuracy: 0.732 | LR: 0.006 | Time: 47.819
+Epoch 50: Train loss: 0.0075 | Val loss: 0.0118 | Train accuracy: 0.833 | Val accuracy: 0.758 | LR: 0.006 | Time: 47.600
+Epoch 55: Train loss: 0.0065 | Val loss: 0.0106 | Train accuracy: 0.859 | Val accuracy: 0.784 | LR: 0.006 | Time: 61.547
+Epoch 60: Train loss: 0.0068 | Val loss: 0.0116 | Train accuracy: 0.849 | Val accuracy: 0.760 | LR: 0.005 | Time: 47.146
+Epoch 65: Train loss: 0.0056 | Val loss: 0.0095 | Train accuracy: 0.876 | Val accuracy: 0.813 | LR: 0.005 | Time: 47.278
+Epoch 70: Train loss: 0.0070 | Val loss: 0.0120 | Train accuracy: 0.849 | Val accuracy: 0.761 | LR: 0.005 | Time: 47.318
+Epoch 75: Train loss: 0.0057 | Val loss: 0.0091 | Train accuracy: 0.873 | Val accuracy: 0.797 | LR: 0.005 | Time: 47.317
+Epoch 80: Train loss: 0.0074 | Val loss: 0.0122 | Train accuracy: 0.839 | Val accuracy: 0.758 | LR: 0.004 | Time: 61.842
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 129, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 102, in train
+    output = self.model(data)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 33, in forward
+    x = torch.mean(self.outer_transform(x), dim = -2)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 74, in forward
+    x = self.Gamma(x)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+KeyboardInterrupt

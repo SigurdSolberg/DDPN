@@ -1,0 +1,609 @@
+2023-12-31 11:00:35,002 INFO    StreamThr :80333 [internal.py:wandb_internal():87] W&B internal server running at pid: 80333, started at: 2023-12-31 11:00:35.001738
+2023-12-31 11:00:35,002 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status
+2023-12-31 11:00:35,016 INFO    WriterThread:80333 [datastore.py:open_for_write():85] open: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/run-wa3qxlkh.wandb
+2023-12-31 11:00:35,017 DEBUG   SenderThread:80333 [sender.py:send():336] send: header
+2023-12-31 11:00:35,092 DEBUG   SenderThread:80333 [sender.py:send():336] send: run
+2023-12-31 11:00:36,071 INFO    SenderThread:80333 [dir_watcher.py:__init__():216] watching files in: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files
+2023-12-31 11:00:36,071 INFO    SenderThread:80333 [sender.py:_start_run_threads():1067] run started: wa3qxlkh with start time 1704016835.013053
+2023-12-31 11:00:36,072 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:00:36,072 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:00:36,075 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: check_version
+2023-12-31 11:00:36,075 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: check_version
+2023-12-31 11:00:37,083 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:00:39,228 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: run_start
+2023-12-31 11:00:39,259 DEBUG   HandlerThread:80333 [system_info.py:__init__():31] System info init
+2023-12-31 11:00:39,260 DEBUG   HandlerThread:80333 [system_info.py:__init__():46] System info init done
+2023-12-31 11:00:39,260 INFO    HandlerThread:80333 [system_monitor.py:start():151] Starting system monitor
+2023-12-31 11:00:39,260 INFO    SystemMonitor:80333 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-12-31 11:00:39,260 INFO    HandlerThread:80333 [system_monitor.py:probe():172] Collecting system info
+2023-12-31 11:00:39,260 DEBUG   HandlerThread:80333 [system_info.py:probe():195] Probing system
+2023-12-31 11:00:39,261 INFO    SystemMonitor:80333 [interfaces.py:start():168] Started cpu
+2023-12-31 11:00:39,261 INFO    SystemMonitor:80333 [interfaces.py:start():168] Started disk
+2023-12-31 11:00:39,262 INFO    SystemMonitor:80333 [interfaces.py:start():168] Started memory
+2023-12-31 11:00:39,262 INFO    SystemMonitor:80333 [interfaces.py:start():168] Started network
+2023-12-31 11:00:39,276 DEBUG   HandlerThread:80333 [system_info.py:_probe_git():180] Probing git
+2023-12-31 11:00:39,346 DEBUG   HandlerThread:80333 [system_info.py:_probe_git():188] Probing git done
+2023-12-31 11:00:39,346 DEBUG   HandlerThread:80333 [system_info.py:probe():241] Probing system done
+2023-12-31 11:00:39,346 DEBUG   HandlerThread:80333 [system_monitor.py:probe():181] {'os': 'macOS-10.16-x86_64-i386-64bit', 'python': '3.9.16', 'heartbeatAt': '2023-12-31T10:00:39.260938', 'startedAt': '2023-12-31T10:00:34.991846', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py', 'codePath': 'modenet.py', 'git': {'remote': 'https://github.com/SigurdSolberg/DDPN.git', 'commit': '45da2ba23e899a2819a29299d377496566738ed4'}, 'email': 'sigroll@gmail.com', 'root': '/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN', 'host': 'Sigurds-MacBook-Pro.local', 'username': 'sigurdrollsolberg', 'executable': '/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'cpu_freq': {'current': 2400, 'min': 2400, 'max': 2400}, 'cpu_freq_per_core': [{'current': 2400, 'min': 2400, 'max': 2400}], 'disk': {'total': 926.3517189025879, 'used': 321.78056716918945}, 'memory': {'total': 32.0}}
+2023-12-31 11:00:39,346 INFO    HandlerThread:80333 [system_monitor.py:probe():182] Finished collecting system info
+2023-12-31 11:00:39,346 INFO    HandlerThread:80333 [system_monitor.py:probe():185] Publishing system info
+2023-12-31 11:00:39,346 DEBUG   HandlerThread:80333 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-12-31 11:00:39,347 DEBUG   HandlerThread:80333 [system_info.py:_save_pip():67] Saving pip packages done
+2023-12-31 11:00:39,347 DEBUG   HandlerThread:80333 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-12-31 11:00:40,088 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/conda-environment.yaml
+2023-12-31 11:00:40,088 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/requirements.txt
+2023-12-31 11:00:57,627 DEBUG   HandlerThread:80333 [system_info.py:_save_conda():86] Saving conda packages done
+2023-12-31 11:00:57,628 INFO    HandlerThread:80333 [system_monitor.py:probe():187] Finished publishing system info
+2023-12-31 11:00:57,954 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:00:57,955 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:00:57,955 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:00:57,955 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:00:57,955 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:00:57,956 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:00:57,956 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:00:57,957 DEBUG   SenderThread:80333 [sender.py:send():336] send: files
+2023-12-31 11:00:57,957 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-12-31 11:00:57,969 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: stop_status
+2023-12-31 11:00:57,970 DEBUG   SenderThread:80333 [sender.py:send():336] send: telemetry
+2023-12-31 11:00:57,971 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: stop_status
+2023-12-31 11:00:58,167 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/conda-environment.yaml
+2023-12-31 11:00:58,168 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-metadata.json
+2023-12-31 11:01:02,026 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:06,350 INFO    wandb-upload_0:80333 [upload_job.py:push():138] Uploaded file /var/folders/s5/_ptt26cn37v2qy8jvkshqnnm0000gn/T/tmp3lqe9votwandb/yo1my69w-wandb-metadata.json
+2023-12-31 11:01:06,969 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:01:06,970 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:01:06,970 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:01:06,974 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:01:07,197 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:01:07,197 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:01:07,982 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:09,208 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:01:12,975 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:12,981 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:18,130 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:23,172 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:23,276 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/config.yaml
+2023-12-31 11:01:27,429 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:28,212 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:32,454 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:33,292 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:37,475 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:38,344 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:39,264 DEBUG   SystemMonitor:80333 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-12-31 11:01:39,265 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:01:43,280 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:43,364 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:48,306 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:48,433 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:53,329 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:01:53,495 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:54,180 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:01:54,181 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:01:54,181 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:01:54,186 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:01:54,414 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:01:55,420 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:01:58,580 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:01:59,211 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:03,664 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:04,230 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:08,730 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:09,253 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:09,269 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:02:13,772 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:14,291 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:18,799 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:19,316 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:21,270 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:02:21,271 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:02:21,271 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:02:21,275 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:02:21,541 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:02:23,552 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:02:23,858 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:25,295 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:28,940 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:30,312 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:33,992 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:35,328 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:39,048 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:39,271 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:02:41,272 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:44,084 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:46,290 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:48,394 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:02:48,395 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:02:48,395 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:02:48,398 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:02:48,673 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:02:49,159 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:49,678 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:02:51,409 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:54,219 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:02:56,428 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:02:59,245 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:01,446 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:04,286 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:06,466 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:06,578 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Read timed out. (read timeout=None). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:03:08,766 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036ca90>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:03:09,275 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:03:09,342 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:12,290 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:13,198 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036cac0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:03:14,412 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:15,687 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:03:15,688 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:03:15,688 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:03:15,695 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:03:15,799 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:03:17,705 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:17,807 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:03:19,455 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:22,730 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:22,750 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036c8b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:03:24,517 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:27,751 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:29,577 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:32,774 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:34,635 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:37,796 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:39,279 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:03:39,701 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:40,783 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036c8b0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:03:42,929 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:03:42,930 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:42,930 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:03:42,931 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:03:42,975 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:03:43,932 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:03:44,765 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:45,943 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:03:48,001 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:49,864 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:53,035 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:54,911 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:03:58,051 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:03:59,926 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:03,074 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:04,963 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:08,099 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:09,281 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:04:10,016 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:13,297 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:15,046 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:18,308 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036cb20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:04:18,315 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:20,123 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:23,335 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:25,122 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:04:25,123 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:04:25,123 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:04:25,127 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:04:25,161 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:25,194 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:04:26,200 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:04:29,143 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:30,206 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:34,165 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:35,253 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:39,184 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:39,283 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:04:40,295 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:44,305 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:45,332 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:49,326 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:50,388 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:04:52,037 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:04:52,037 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:04:52,038 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:04:52,041 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:04:52,327 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:04:54,337 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:04:55,051 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:04:55,414 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:00,076 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:00,462 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:05,100 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:05,510 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:09,286 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:05:10,292 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:10,547 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:15,317 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:15,580 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:19,106 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:05:19,106 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:05:19,107 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:05:19,110 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:05:19,451 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:05:20,456 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:05:20,628 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:21,117 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:22,776 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036cf40>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:05:25,667 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:26,138 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:30,699 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:31,159 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:35,743 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:36,184 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:39,287 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:05:40,792 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:41,297 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:45,838 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:46,089 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:05:46,090 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:05:46,090 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:05:46,097 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:05:46,560 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:05:47,101 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:48,566 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:05:50,897 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:52,126 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:05:55,938 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:05:57,147 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:00,975 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:02,165 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:06,065 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:07,178 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:09,288 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:06:11,113 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:12,298 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:13,184 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:06:13,185 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:06:13,185 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:06:13,189 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:06:13,684 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:06:13,684 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:06:16,188 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:18,212 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:21,240 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:23,238 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:26,282 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:28,256 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:31,308 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:33,281 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:36,346 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:38,302 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:39,293 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:06:41,377 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:43,313 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:46,431 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:48,337 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:51,474 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:53,359 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:06:55,846 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:06:55,847 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:06:55,847 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:06:55,853 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:06:55,873 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:06:56,517 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:06:57,884 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:06:58,869 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:01,568 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:03,888 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:06,612 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:08,913 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:09,297 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:07:11,656 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:14,322 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:16,689 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:19,348 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:21,750 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:23,032 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:07:23,033 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:07:23,033 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:07:23,049 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:07:24,011 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:07:24,011 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:07:25,057 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:26,800 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:30,082 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:31,838 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:35,104 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:36,885 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:39,300 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:07:40,305 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:41,928 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:45,331 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:46,979 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:50,197 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:07:50,197 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:07:50,198 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:07:50,202 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:07:51,137 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:07:51,207 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:52,037 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:07:52,143 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:07:52,280 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f915036cc40>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:07:56,230 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:07:57,080 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:01,252 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:02,126 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:06,263 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:07,168 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:09,301 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:08:11,312 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:12,222 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:16,332 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:17,255 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:17,257 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:08:17,258 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:08:17,258 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:08:17,262 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:08:17,268 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:08:18,274 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:08:22,286 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:22,294 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:27,309 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:27,309 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:32,344 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:32,382 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:37,390 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:37,446 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:39,303 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:08:42,502 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:43,338 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:44,517 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:08:44,518 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:08:44,518 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:08:44,523 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:08:45,466 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:08:46,476 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:08:47,585 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:48,558 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:52,712 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:53,603 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:08:57,769 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:08:58,634 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:02,824 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:03,672 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:07,880 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:08,714 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:09,307 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:09:12,921 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:14,346 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:17,980 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:19,392 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:23,044 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:24,440 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:25,653 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:09:25,654 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:09:25,654 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:09:25,664 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:09:25,830 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:09:26,834 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:09:28,113 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:29,693 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:33,167 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:34,728 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:38,210 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:39,313 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:09:40,323 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:43,293 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:43,308 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:45,371 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:48,367 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:50,412 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:52,993 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:09:52,993 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:09:52,994 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:09:53,021 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:09:53,049 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:09:53,421 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:09:55,066 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:09:56,029 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:09:58,491 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:01,063 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:03,545 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:06,110 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:08,603 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:09,322 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:10:11,340 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:13,679 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:16,381 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:18,754 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:20,354 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:10:20,355 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:10:20,355 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:10:20,358 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:10:21,273 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:10:22,372 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:23,285 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:10:23,822 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:27,408 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:28,885 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:32,452 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:33,950 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:37,488 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:39,001 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:39,326 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:10:43,353 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:44,057 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:47,662 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:10:47,663 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:10:47,663 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:10:47,671 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:10:48,500 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:10:48,677 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:49,103 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:49,510 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:10:53,710 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:54,161 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:10:58,750 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:10:59,217 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:03,792 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:04,279 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:08,827 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:09,321 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:09,331 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:11:14,365 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:14,371 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:14,376 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:14,971 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: partial_history
+2023-12-31 11:11:14,971 DEBUG   SenderThread:80333 [sender.py:send():336] send: history
+2023-12-31 11:11:14,972 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: summary_record
+2023-12-31 11:11:14,977 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:11:15,737 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:11:16,747 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:11:19,789 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:20,014 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:24,889 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:25,061 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:29,941 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:30,088 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:35,009 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:35,129 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:39,338 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:11:40,067 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:40,347 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:45,133 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: keepalive
+2023-12-31 11:11:45,381 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:47,960 DEBUG   SenderThread:80333 [sender.py:send():336] send: exit
+2023-12-31 11:11:47,960 INFO    SenderThread:80333 [sender.py:send_exit():559] handling exit code: 255
+2023-12-31 11:11:47,960 INFO    SenderThread:80333 [sender.py:send_exit():561] handling runtime: 668
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:send_exit():567] send defer
+2023-12-31 11:11:47,962 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,962 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 0
+2023-12-31 11:11:47,962 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 1
+2023-12-31 11:11:47,962 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,962 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 1
+2023-12-31 11:11:47,962 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-12-31 11:11:47,962 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 2
+2023-12-31 11:11:47,962 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,962 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 2
+2023-12-31 11:11:47,963 INFO    HandlerThread:80333 [system_monitor.py:finish():161] Stopping system monitor
+2023-12-31 11:11:47,987 DEBUG   SystemMonitor:80333 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-12-31 11:11:47,988 DEBUG   SystemMonitor:80333 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-12-31 11:11:47,988 INFO    HandlerThread:80333 [interfaces.py:finish():175] Joined cpu
+2023-12-31 11:11:47,988 INFO    HandlerThread:80333 [interfaces.py:finish():175] Joined disk
+2023-12-31 11:11:47,988 INFO    HandlerThread:80333 [interfaces.py:finish():175] Joined memory
+2023-12-31 11:11:47,988 INFO    HandlerThread:80333 [interfaces.py:finish():175] Joined network
+2023-12-31 11:11:47,989 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 3
+2023-12-31 11:11:47,989 DEBUG   SenderThread:80333 [sender.py:send():336] send: stats
+2023-12-31 11:11:47,989 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,989 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 3
+2023-12-31 11:11:47,989 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 4
+2023-12-31 11:11:47,989 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,989 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 4
+2023-12-31 11:11:47,989 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-12-31 11:11:47,989 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 5
+2023-12-31 11:11:47,989 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,989 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 5
+2023-12-31 11:11:47,990 DEBUG   SenderThread:80333 [sender.py:send():336] send: summary
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-12-31 11:11:47,996 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 6
+2023-12-31 11:11:47,996 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,996 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 6
+2023-12-31 11:11:47,996 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 7
+2023-12-31 11:11:47,996 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: status_report
+2023-12-31 11:11:47,996 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:47,996 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 7
+2023-12-31 11:11:47,996 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:47,996 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-12-31 11:11:48,016 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json
+2023-12-31 11:11:48,965 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: poll_exit
+2023-12-31 11:11:49,968 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 8
+2023-12-31 11:11:49,968 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: poll_exit
+2023-12-31 11:11:49,969 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:49,969 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 8
+2023-12-31 11:11:49,969 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: defer
+2023-12-31 11:11:49,969 INFO    SenderThread:80333 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-12-31 11:11:49,973 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: poll_exit
+2023-12-31 11:11:50,013 INFO    SenderThread:80333 [sender.py:transition_state():587] send defer: 9
+2023-12-31 11:11:50,013 DEBUG   SenderThread:80333 [sender.py:send_request():363] send_request: poll_exit
+2023-12-31 11:11:50,013 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: defer
+2023-12-31 11:11:50,014 DEBUG   SenderThread:80333 [sender.py:send():336] send: artifact
+2023-12-31 11:11:50,014 INFO    HandlerThread:80333 [handler.py:handle_request_defer():170] handle defer: 9
+2023-12-31 11:11:50,029 INFO    Thread-13 :80333 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log
+2023-12-31 11:11:50,980 DEBUG   HandlerThread:80333 [handler.py:handle_request():144] handle_request: poll_exit
+2023-12-31 11:11:51,771 WARNING StreamThr :80333 [internal.py:is_dead():415] Internal process exiting, parent pid 80278 disappeared
+2023-12-31 11:11:51,772 ERROR   StreamThr :80333 [internal.py:wandb_internal():153] Internal process shutdown.
+2023-12-31 11:11:51,988 INFO    HandlerThread:80333 [handler.py:finish():841] shutting down handler
+2023-12-31 11:11:51,988 INFO    WriterThread:80333 [datastore.py:close():299] close: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/run-wa3qxlkh.wandb
+2023-12-31 11:11:53,538 INFO    SenderThread:80333 [retry.py:__call__():172] Retry attempt failed:
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f9150388670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9150388670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/sdk/internal/internal_api.py", line 242, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9150388670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2023-12-31 11:13:01,189 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9150388af0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:18:43,346 WARNING FileStreamThread:80333 [file_stream.py:request_with_retry():667] requests_with_retry encountered retryable exception: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /files/sigurd_solberg/DSSN/wa3qxlkh/file_stream (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f9150388490>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')). func: <bound method Session.post of <requests.sessions.Session object at 0x7f9140061370>>, args: ('https://api.wandb.ai/files/sigurd_solberg/DSSN/wa3qxlkh/file_stream',), kwargs: {'json': {'files': {'wandb-events.jsonl': {'offset': 0, 'content': ['{"system.disk": 34.7, "system.network.sent": 176947.2, "system.network.recv": 335667.2, "system.cpu": 0.7, "system.cpu.0.cpu_percent": 65.8, "system.cpu.1.cpu_percent": 65.9, "system.cpu.2.cpu_percent": 68.13, "system.cpu.3.cpu_percent": 50.59, "system.cpu.4.cpu_percent": 43.13, "system.cpu.5.cpu_percent": 40.62, "system.cpu.6.cpu_percent": 43.11, "system.cpu.7.cpu_percent": 38.03, "system.cpu.8.cpu_percent": 36.22, "system.cpu.9.cpu_percent": 35.48, "system.proc.cpu.threads": 18, "system.proc.memory.availableMB": 3743.45, "system.memory": 88.57, "system.proc.memory.rssMB": 2496.9, "system.proc.memory.percent": 7.62, "_wandb": true, "_timestamp": 1704016899.265035, "_runtime": 64.251982}']}}, 'dropped': 0}}
+2023-12-31 11:21:06,069 INFO    SenderThread:80333 [sender.py:send_artifact():1417] sent artifact job-https___github.com_SigurdSolberg_DDPN.git_modenet.py - {'id': 'QXJ0aWZhY3Q6Njc4MTg2MTU2', 'digest': '10db4acc382092845029b5d2df30b425', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_SigurdSolberg_DDPN.git_modenet.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_SigurdSolberg_DDPN.git_modenet.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNjUyMzUzNg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njc4MTg2MTU2', 'versionIndex': 0}}, 'version': 'v0'}
+2023-12-31 11:21:06,070 INFO    SenderThread:80333 [sender.py:finish():1493] shutting down sender
+2023-12-31 11:21:06,070 INFO    SenderThread:80333 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-12-31 11:21:06,323 INFO    SenderThread:80333 [dir_watcher.py:finish():392] scan: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/requirements.txt requirements.txt
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/output.log output.log
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/config.yaml config.yaml
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-summary.json wandb-summary.json
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/conda-environment.yaml conda-environment.yaml
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20231231_110034-wa3qxlkh/files/wandb-metadata.json wandb-metadata.json
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [file_pusher.py:finish():162] shutting down file pusher
+2023-12-31 11:21:06,324 INFO    SenderThread:80333 [file_pusher.py:join():167] waiting for file pusher

@@ -1,0 +1,25 @@
+
+Epoch 0: Train loss: 0.0339 | Val loss: 0.0387 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.010 | Time: 3.376
+Epoch 5: Train loss: 0.0338 | Val loss: 0.0398 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 43.031
+Epoch 10: Train loss: 0.0337 | Val loss: 0.0394 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 10.023
+Epoch 15: Train loss: 0.0337 | Val loss: 0.0398 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.009 | Time: 10.063
+Epoch 20: Train loss: 0.0337 | Val loss: 0.0397 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.008 | Time: 9.897
+Epoch 25: Train loss: 0.0337 | Val loss: 0.0394 | Train accuracy: 0.223 | Val accuracy: 0.110 | LR: 0.008 | Time: 9.937
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 112, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 128, in train
+    self.model.visualize_outer(
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 64, in visualize_outer
+    x_2d = UMAP(n_components=2).fit_transform(x)#PCA(n_components=2).fit_transform(x)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 2772, in fit_transform
+    self.fit(X, y)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/umap/umap_.py", line 2439, in fit
+    dmat = pairwise_distances(X[index], metric=_m, **self._metric_kwds)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/sklearn/metrics/pairwise.py", line 2039, in pairwise_distances
+    return _parallel_pairwise(X, Y, func, n_jobs, **kwds)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/sklearn/metrics/pairwise.py", line 1579, in _parallel_pairwise
+    return func(X, Y, **kwds)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/sklearn/metrics/pairwise.py", line 1606, in _pairwise_callable
+    out[i, j] = metric(X[i], Y[j], **kwds)
+KeyboardInterrupt

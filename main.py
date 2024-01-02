@@ -1,7 +1,7 @@
 import numpy as np
 
 from src.distributed_homology import DistributedHomology
-from src.models import DSSN, PersLay_DDPN
+from src.models import DSSN, PersLay_DDPN, PersLay
 from src.training_tools import TrainingLoop, DHDataset
 from src.normalization import normalize_size, normalize_size_dwise
 
@@ -23,20 +23,24 @@ if __name__ == '__main__':
 
     # Compute the distributed homology
     dh = DistributedHomology()
-    data = dh.fit(X, m = 100 , k = 25, normalization=[normalize_size_dwise], max_featues=150)
+    #data = dh.fit(X, m = 100, k = 200, normalization=[normalize_size_dwise], max_featues=150)
+    data = dh.get_subsets(X, m = 100, k = 200, normalization=[normalize_size_dwise],)
     print(f'data shape: {data.shape}')
+
+    # Select subsets to skip PH in pipeline
+    data = dh.subsets
 
     # Create a dataloader
     train_data, val_data, train_labels, val_labels = train_test_split(data, Y, test_size=0.3, random_state=1)
     train_dataset = DHDataset(train_data, train_labels)
-    train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
+    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
     val_dataset = DHDataset(val_data, val_labels)
     val_loader = DataLoader(val_dataset, batch_size=1, shuffle=True) # Use batch size 1 to verify the that the batchnorm works
 
 
     # Create a DDPN model
     inner_rho = nn.Sequential(
-            nn.Linear(6, 12),
+            nn.Linear(3, 12),
             nn.LeakyReLU(),
             nn.Linear(12, 16),
             ).to(device)
@@ -60,7 +64,7 @@ if __name__ == '__main__':
                 ).to(device)
 
     model = DSSN(
-        inner_transform = PersLay_DDPN(rho=inner_rho, phi=inner_phi), 
+        inner_transform = PersLay(inner_rho, inner_phi),#PersLay_DDPN(rho=inner_rho, phi=inner_phi), 
         outer_transform = outer_rho, 
         downstream_network = downstream_network,
         device = 'cpu'
@@ -76,6 +80,5 @@ if __name__ == '__main__':
     training_loop = TrainingLoop(model=model, optimizer=optimizer, loss_function=loss, device=device, scheduler=scheduler)
     training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
 
-    #model.visualize_inner(val_dataset.x, val_dataset.y) 
     model.visualize_outer(train_dataset.x, train_dataset.y)   
 
