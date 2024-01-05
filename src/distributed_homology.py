@@ -194,7 +194,7 @@ class DistributedHomology():
         self.subsets = []
 
         do_standardize = True
-        do_augmentation = True
+        do_augmentation = True 
 
         self.prep1 = standardize if do_standardize else lambda x: x
         self.prep2 = (lambda x: augment(self.prep1(x))) if do_augmentation else self.prep1

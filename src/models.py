@@ -22,14 +22,14 @@ class DSSN(nn.Module):
         self.inner_transform = inner_transform
         self.outer_transform = outer_transform
         self.downstream_network = downstream_network
-        if norm:
-            self.norm = nn.Identity()
-        else:
+        self.use_norm = norm
+        if norm: 
             self.norm = SetBatchNorm()
 
     def forward(self:nn.Module, x) -> torch.Tensor: 
         x = torch.mean(self.inner_transform(x), dim = -2)
-        x = self.norm(x)
+        if self.use_norm:
+            x = self.norm(x)
         x = torch.mean(self.outer_transform(x), dim = -2)
         x = self.downstream_network(x)
         return x
@@ -57,8 +57,9 @@ class DSSN(nn.Module):
         Visualizes the latent space emedding produced outer transform of the DSSN.
         """
 
-        x = torch.sum(self.inner_transform(x), dim = -2)
-        x = self.norm(x)
+        x = torch.mean(self.inner_transform(x), dim = -2)
+        if self.use_norm:
+            x = self.norm(x)
         x = torch.mean(self.outer_transform(x), dim = -2).cpu().detach().numpy()
 
         x_2d = UMAP(n_components=2).fit_transform(x)#PCA(n_components=2).fit_transform(x)

@@ -20,12 +20,12 @@ from torch_geometric.loader import DataLoader
 device = torch.device('cpu')
 
 
-K = 100
-M = 5
+K = 1000
+M = 1
 DIM = 256
 
 pre_transform = T.NormalizeScale()
-transform = T.SamplePoints(5000)
+transform = T.SamplePoints(10000)
 
 train_dataset = ModelNet(
     root="data/ModelNet10", name='10', train=True,
@@ -52,13 +52,13 @@ val_labels = pd.get_dummies(val_labels).to_numpy()
 train_labels = pd.get_dummies(train_labels).to_numpy()
 
 # Compute the distributed homology
-dh = DistributedHomology()
+'''dh = DistributedHomology()
 val_data = dh.get_subsets(val_data, m = M, k = K)
-print(f'Val data shape: {val_data.shape}')
+print(f'Val data shape: {val_data.shape}')'''
 
 train_dataset = DHDataset(np.array(train_data), train_labels)
 train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-val_dataset = DHDataset(val_data, val_labels)
+val_dataset = DHDataset(np.array(val_data), val_labels)
 val_loader = DataLoader(val_dataset, batch_size=64, shuffle=True) # Use batch size 1 to verify the that the batchnorm works
 
 
@@ -92,9 +92,9 @@ inner_rho = nn.Sequential(
 )
 
 outer_rho = nn.Sequential(
-    nn.Linear(DIM, DIM),
-    nn.LeakyReLU(),
-    nn.Linear(DIM, DIM),
+    #nn.Linear(DIM, DIM),
+    #nn.LeakyReLU(),
+    #nn.Linear(DIM, DIM),
     ).to(device)
 
 downstream_network = nn.Sequential( 
@@ -123,6 +123,6 @@ optimizer = optim.Adam(model.parameters(), lr=lr)
 scheduler = ExponentialLR(optimizer=optimizer, gamma=0.99)
 
 training_loop = TrainingLoopWithSampling(model=model, optimizer=optimizer, loss_function=loss, device=device, scheduler=scheduler, k = K, m = M)
-training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=1000, verbose=True)
 
 model.visualize_outer(train_dataset.x, train_dataset.y)

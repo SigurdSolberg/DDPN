@@ -9,6 +9,33 @@ import wandb
 
 wandb.login()
 
+def rotate_z(theta, x):
+    theta = np.expand_dims(theta, 1)
+    outz = np.expand_dims(x[:,:,2], 2)
+    sin_t = np.sin(theta)
+    cos_t = np.cos(theta)
+    xx = np.expand_dims(x[:,:,0], 2)
+    yy = np.expand_dims(x[:,:,1], 2)
+    outx = cos_t * xx - sin_t*yy
+    outy = sin_t * xx + cos_t*yy
+    return np.concatenate([outx, outy, outz], axis=2)
+    
+def augment(x):
+    bs = x.shape[0]
+    #rotation
+    thetas = np.random.uniform(-0.1, 0.1, [bs,1])*np.pi
+    rotated = rotate_z(thetas, x)
+    #scaling
+    scale = np.random.rand(bs,1,3)*0.45 + 0.8
+    return rotated*scale
+
+def standardize(x):
+    clipper = np.mean(np.abs(x), (1,2), keepdims=True)
+    z = np.clip(x, -100*clipper, 100*clipper)
+    mean = np.mean(z, (1,2), keepdims=True)
+    std = np.std(z, (1,2), keepdims=True)
+    return (z-mean)/std
+
 class TrainingLoop():
 
     def __init__(self, model, optimizer, loss_function, device, scheduler = None) -> None:
@@ -80,6 +107,10 @@ class TrainingLoopWithSampling(TrainingLoop):
         super().__init__(model, optimizer, loss_function, device, scheduler)
         self.k = k
         self.m = m
+
+        self.prep1 = standardize
+        self.prep2 = (lambda x: augment(self.prep1(x)))
+
         self.dh = DistributedHomology()
 
     def train(self, train_loader, val_loader, epochs, verbose = True):
@@ -94,9 +125,11 @@ class TrainingLoopWithSampling(TrainingLoop):
 
             for batch_idx, (data, target) in enumerate(train_loader):
 
-                data, target = data.to(self.device), target.to(self.device)
+                data = self.prep2(data.numpy())
 
-                data = torch.tensor(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True), dtype= torch.float32, device=self.device)
+                data = torch.tensor(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True), dtype=torch.float32, device = self.device)
+
+                data, target = data.to(self.device), target.to(self.device)
 
                 self.optimizer.zero_grad()
                 output = self.model(data)
@@ -139,9 +172,9 @@ class TrainingLoopWithSampling(TrainingLoop):
         correct = 0
         with torch.no_grad():
             for data, target in test_loader:
+                data = self.prep1(data.numpy())
+                data = torch.tensor(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True), dtype=torch.float32, device = self.device)
                 data, target = data.to(self.device), target.to(self.device)
-                if sample:
-                    data = torch.tensor(np.array(self.dh.get_subsets(data, k = self.k, m = self.m, disable=True)), dtype= torch.float32, device=self.device)
                 output = self.model(data)
                 test_loss += self.loss_function(output, target).item()
                 _, pred = torch.max(output.data, 1)
