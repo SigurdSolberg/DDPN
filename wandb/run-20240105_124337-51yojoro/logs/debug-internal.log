@@ -1,0 +1,184 @@
+2024-01-05 12:43:37,539 INFO    StreamThr :43105 [internal.py:wandb_internal():87] W&B internal server running at pid: 43105, started at: 2024-01-05 12:43:37.538584
+2024-01-05 12:43:37,540 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status
+2024-01-05 12:43:37,552 INFO    WriterThread:43105 [datastore.py:open_for_write():85] open: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/run-51yojoro.wandb
+2024-01-05 12:43:37,553 DEBUG   SenderThread:43105 [sender.py:send():336] send: header
+2024-01-05 12:43:37,620 DEBUG   SenderThread:43105 [sender.py:send():336] send: run
+2024-01-05 12:43:38,373 INFO    SenderThread:43105 [dir_watcher.py:__init__():216] watching files in: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files
+2024-01-05 12:43:38,374 INFO    SenderThread:43105 [sender.py:_start_run_threads():1067] run started: 51yojoro with start time 1704455017.547695
+2024-01-05 12:43:38,375 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: summary_record
+2024-01-05 12:43:38,376 INFO    SenderThread:43105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-01-05 12:43:38,382 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: check_version
+2024-01-05 12:43:38,383 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: check_version
+2024-01-05 12:43:38,581 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: run_start
+2024-01-05 12:43:38,627 DEBUG   HandlerThread:43105 [system_info.py:__init__():31] System info init
+2024-01-05 12:43:38,627 DEBUG   HandlerThread:43105 [system_info.py:__init__():46] System info init done
+2024-01-05 12:43:38,628 INFO    HandlerThread:43105 [system_monitor.py:start():151] Starting system monitor
+2024-01-05 12:43:38,628 INFO    SystemMonitor:43105 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2024-01-05 12:43:38,628 INFO    HandlerThread:43105 [system_monitor.py:probe():172] Collecting system info
+2024-01-05 12:43:38,629 INFO    SystemMonitor:43105 [interfaces.py:start():168] Started cpu
+2024-01-05 12:43:38,629 DEBUG   HandlerThread:43105 [system_info.py:probe():195] Probing system
+2024-01-05 12:43:38,629 INFO    SystemMonitor:43105 [interfaces.py:start():168] Started disk
+2024-01-05 12:43:38,629 INFO    SystemMonitor:43105 [interfaces.py:start():168] Started memory
+2024-01-05 12:43:38,630 INFO    SystemMonitor:43105 [interfaces.py:start():168] Started network
+2024-01-05 12:43:38,644 DEBUG   HandlerThread:43105 [system_info.py:_probe_git():180] Probing git
+2024-01-05 12:43:38,707 DEBUG   HandlerThread:43105 [system_info.py:_probe_git():188] Probing git done
+2024-01-05 12:43:38,708 DEBUG   HandlerThread:43105 [system_info.py:probe():241] Probing system done
+2024-01-05 12:43:38,708 DEBUG   HandlerThread:43105 [system_monitor.py:probe():181] {'os': 'macOS-10.16-x86_64-i386-64bit', 'python': '3.9.16', 'heartbeatAt': '2024-01-05T11:43:38.629391', 'startedAt': '2024-01-05T11:43:37.527257', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py', 'codePath': 'modenet.py', 'git': {'remote': 'https://github.com/SigurdSolberg/DDPN.git', 'commit': '9c8133c1cca8a15cefe0f3d89126a370d7409cc3'}, 'email': 'sigroll@gmail.com', 'root': '/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN', 'host': 'unassigned-ip-address.shadow-domain.cosng.net', 'username': 'sigurdrollsolberg', 'executable': '/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/bin/python', 'cpu_count': 10, 'cpu_count_logical': 10, 'cpu_freq': {'current': 2400, 'min': 2400, 'max': 2400}, 'cpu_freq_per_core': [{'current': 2400, 'min': 2400, 'max': 2400}], 'disk': {'total': 926.3517189025879, 'used': 321.1996841430664}, 'memory': {'total': 32.0}}
+2024-01-05 12:43:38,708 INFO    HandlerThread:43105 [system_monitor.py:probe():182] Finished collecting system info
+2024-01-05 12:43:38,708 INFO    HandlerThread:43105 [system_monitor.py:probe():185] Publishing system info
+2024-01-05 12:43:38,708 DEBUG   HandlerThread:43105 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-01-05 12:43:38,709 DEBUG   HandlerThread:43105 [system_info.py:_save_pip():67] Saving pip packages done
+2024-01-05 12:43:38,709 DEBUG   HandlerThread:43105 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2024-01-05 12:43:39,380 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-summary.json
+2024-01-05 12:43:39,380 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/conda-environment.yaml
+2024-01-05 12:43:39,380 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/requirements.txt
+2024-01-05 12:43:52,954 DEBUG   HandlerThread:43105 [system_info.py:_save_conda():86] Saving conda packages done
+2024-01-05 12:43:52,955 INFO    HandlerThread:43105 [system_monitor.py:probe():187] Finished publishing system info
+2024-01-05 12:43:53,035 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status_report
+2024-01-05 12:43:53,036 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: keepalive
+2024-01-05 12:43:53,036 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status_report
+2024-01-05 12:43:53,036 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: keepalive
+2024-01-05 12:43:53,036 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status_report
+2024-01-05 12:43:53,036 DEBUG   SenderThread:43105 [sender.py:send():336] send: files
+2024-01-05 12:43:53,037 INFO    SenderThread:43105 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2024-01-05 12:43:53,043 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-05 12:43:53,043 DEBUG   SenderThread:43105 [sender.py:send():336] send: telemetry
+2024-01-05 12:43:53,044 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: stop_status
+2024-01-05 12:43:53,354 DEBUG   SenderThread:43105 [sender.py:send():336] send: exit
+2024-01-05 12:43:53,354 INFO    SenderThread:43105 [sender.py:send_exit():559] handling exit code: 1
+2024-01-05 12:43:53,354 INFO    SenderThread:43105 [sender.py:send_exit():561] handling runtime: 14
+2024-01-05 12:43:53,360 INFO    SenderThread:43105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-01-05 12:43:53,360 INFO    SenderThread:43105 [sender.py:send_exit():567] send defer
+2024-01-05 12:43:53,360 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,361 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 0
+2024-01-05 12:43:53,361 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,361 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 0
+2024-01-05 12:43:53,361 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 1
+2024-01-05 12:43:53,361 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,361 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 1
+2024-01-05 12:43:53,361 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,361 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 1
+2024-01-05 12:43:53,361 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 2
+2024-01-05 12:43:53,361 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,361 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 2
+2024-01-05 12:43:53,361 INFO    HandlerThread:43105 [system_monitor.py:finish():161] Stopping system monitor
+2024-01-05 12:43:53,385 DEBUG   SystemMonitor:43105 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2024-01-05 12:43:53,385 DEBUG   SystemMonitor:43105 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2024-01-05 12:43:53,386 INFO    HandlerThread:43105 [interfaces.py:finish():175] Joined cpu
+2024-01-05 12:43:53,386 DEBUG   SystemMonitor:43105 [system_monitor.py:_start():141] Publishing last batch of metrics
+2024-01-05 12:43:53,386 INFO    HandlerThread:43105 [interfaces.py:finish():175] Joined disk
+2024-01-05 12:43:53,386 INFO    HandlerThread:43105 [interfaces.py:finish():175] Joined memory
+2024-01-05 12:43:53,386 INFO    HandlerThread:43105 [interfaces.py:finish():175] Joined network
+2024-01-05 12:43:53,386 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,386 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 2
+2024-01-05 12:43:53,386 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 3
+2024-01-05 12:43:53,386 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,386 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 3
+2024-01-05 12:43:53,387 DEBUG   SenderThread:43105 [sender.py:send():336] send: stats
+2024-01-05 12:43:53,387 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,387 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 3
+2024-01-05 12:43:53,387 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 4
+2024-01-05 12:43:53,387 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,387 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 4
+2024-01-05 12:43:53,387 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,387 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 4
+2024-01-05 12:43:53,387 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 5
+2024-01-05 12:43:53,387 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,387 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 5
+2024-01-05 12:43:53,387 DEBUG   SenderThread:43105 [sender.py:send():336] send: summary
+2024-01-05 12:43:53,394 INFO    SenderThread:43105 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2024-01-05 12:43:53,394 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,394 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 5
+2024-01-05 12:43:53,394 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 6
+2024-01-05 12:43:53,394 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,394 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 6
+2024-01-05 12:43:53,394 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,394 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 6
+2024-01-05 12:43:53,397 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status_report
+2024-01-05 12:43:53,442 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-summary.json
+2024-01-05 12:43:53,442 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/conda-environment.yaml
+2024-01-05 12:43:53,442 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/output.log
+2024-01-05 12:43:53,442 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-metadata.json
+2024-01-05 12:43:53,649 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 7
+2024-01-05 12:43:53,650 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:53,650 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 7
+2024-01-05 12:43:53,651 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:53,651 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 7
+2024-01-05 12:43:53,673 INFO    wandb-upload_0:43105 [upload_job.py:push():138] Uploaded file /var/folders/s5/_ptt26cn37v2qy8jvkshqnnm0000gn/T/tmp56jl6uj_wandb/s23zpd6t-wandb-metadata.json
+2024-01-05 12:43:54,203 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-05 12:43:54,453 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/config.yaml
+2024-01-05 12:43:55,376 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 8
+2024-01-05 12:43:55,377 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: poll_exit
+2024-01-05 12:43:55,380 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:55,380 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 8
+2024-01-05 12:43:55,382 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:55,382 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 8
+2024-01-05 12:43:55,463 INFO    Thread-13 :43105 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/output.log
+2024-01-05 12:43:55,484 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 9
+2024-01-05 12:43:55,486 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:55,486 DEBUG   SenderThread:43105 [sender.py:send():336] send: artifact
+2024-01-05 12:43:55,486 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 9
+2024-01-05 12:43:57,096 INFO    wandb-upload_1:43105 [upload_job.py:push():93] Skipped uploading /Users/sigurdrollsolberg/Library/Application Support/wandb/artifacts/staging/tmpkbuvtehg
+2024-01-05 12:43:57,514 INFO    wandb-upload_0:43105 [upload_job.py:push():96] Uploaded file /Users/sigurdrollsolberg/Library/Application Support/wandb/artifacts/staging/tmpe4rpx2hu
+2024-01-05 12:43:58,887 INFO    SenderThread:43105 [sender.py:send_artifact():1417] sent artifact job-https___github.com_SigurdSolberg_DDPN.git_modenet.py - {'id': 'QXJ0aWZhY3Q6NjgyNDQ0NzI4', 'digest': '02d5df88c0a23cbd9774cd8ddb8d654f', 'state': 'PENDING', 'aliases': [], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjEyNjUyMzUzNg==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Njc4MzAzNzIw', 'versionIndex': 1}}, 'version': 'latest'}
+2024-01-05 12:43:58,887 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:58,887 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 9
+2024-01-05 12:43:58,888 INFO    SenderThread:43105 [dir_watcher.py:finish():362] shutting down directory watcher
+2024-01-05 12:43:58,888 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: status_report
+2024-01-05 12:43:59,224 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: keepalive
+2024-01-05 12:43:59,486 INFO    SenderThread:43105 [dir_watcher.py:finish():392] scan: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files
+2024-01-05 12:43:59,488 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/requirements.txt requirements.txt
+2024-01-05 12:43:59,488 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/output.log output.log
+2024-01-05 12:43:59,493 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/config.yaml config.yaml
+2024-01-05 12:43:59,496 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-summary.json wandb-summary.json
+2024-01-05 12:43:59,500 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/conda-environment.yaml conda-environment.yaml
+2024-01-05 12:43:59,505 INFO    SenderThread:43105 [dir_watcher.py:finish():406] scan save: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-metadata.json wandb-metadata.json
+2024-01-05 12:43:59,505 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 10
+2024-01-05 12:43:59,506 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:43:59,509 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 10
+2024-01-05 12:43:59,510 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:43:59,510 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 10
+2024-01-05 12:43:59,510 INFO    SenderThread:43105 [file_pusher.py:finish():162] shutting down file pusher
+2024-01-05 12:43:59,987 INFO    wandb-upload_4:43105 [upload_job.py:push():138] Uploaded file /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/conda-environment.yaml
+2024-01-05 12:44:00,106 INFO    wandb-upload_2:43105 [upload_job.py:push():138] Uploaded file /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/config.yaml
+2024-01-05 12:44:00,106 INFO    wandb-upload_0:43105 [upload_job.py:push():138] Uploaded file /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/output.log
+2024-01-05 12:44:00,113 INFO    wandb-upload_1:43105 [upload_job.py:push():138] Uploaded file /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/requirements.txt
+2024-01-05 12:44:00,122 INFO    wandb-upload_3:43105 [upload_job.py:push():138] Uploaded file /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/files/wandb-summary.json
+2024-01-05 12:44:00,323 INFO    Thread-12 :43105 [sender.py:transition_state():587] send defer: 11
+2024-01-05 12:44:00,323 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:44:00,323 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 11
+2024-01-05 12:44:00,323 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:44:00,323 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 11
+2024-01-05 12:44:00,323 INFO    SenderThread:43105 [file_pusher.py:join():167] waiting for file pusher
+2024-01-05 12:44:00,324 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 12
+2024-01-05 12:44:00,324 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:44:00,324 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 12
+2024-01-05 12:44:00,324 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:44:00,324 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 12
+2024-01-05 12:44:00,487 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 13
+2024-01-05 12:44:00,488 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:44:00,488 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 13
+2024-01-05 12:44:00,488 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:44:00,488 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 13
+2024-01-05 12:44:00,488 INFO    SenderThread:43105 [sender.py:transition_state():587] send defer: 14
+2024-01-05 12:44:00,488 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: defer
+2024-01-05 12:44:00,488 INFO    HandlerThread:43105 [handler.py:handle_request_defer():170] handle defer: 14
+2024-01-05 12:44:00,488 DEBUG   SenderThread:43105 [sender.py:send():336] send: final
+2024-01-05 12:44:00,488 DEBUG   SenderThread:43105 [sender.py:send():336] send: footer
+2024-01-05 12:44:00,488 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: defer
+2024-01-05 12:44:00,488 INFO    SenderThread:43105 [sender.py:send_request_defer():583] handle sender defer: 14
+2024-01-05 12:44:00,489 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: poll_exit
+2024-01-05 12:44:00,489 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: poll_exit
+2024-01-05 12:44:00,489 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: server_info
+2024-01-05 12:44:00,489 DEBUG   SenderThread:43105 [sender.py:send_request():363] send_request: server_info
+2024-01-05 12:44:00,490 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: get_summary
+2024-01-05 12:44:00,491 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: sampled_history
+2024-01-05 12:44:00,704 INFO    MainThread:43105 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2024-01-05 12:44:00,704 INFO    MainThread:43105 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2024-01-05 12:44:00,704 INFO    MainThread:43105 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2024-01-05 12:44:00,705 DEBUG   HandlerThread:43105 [handler.py:handle_request():144] handle_request: shutdown
+2024-01-05 12:44:00,705 INFO    HandlerThread:43105 [handler.py:finish():841] shutting down handler
+2024-01-05 12:44:01,492 INFO    WriterThread:43105 [datastore.py:close():299] close: /Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/wandb/run-20240105_124337-51yojoro/run-51yojoro.wandb
+2024-01-05 12:44:01,709 INFO    SenderThread:43105 [sender.py:finish():1493] shutting down sender
+2024-01-05 12:44:01,709 INFO    SenderThread:43105 [file_pusher.py:finish():162] shutting down file pusher
+2024-01-05 12:44:01,709 INFO    SenderThread:43105 [file_pusher.py:join():167] waiting for file pusher

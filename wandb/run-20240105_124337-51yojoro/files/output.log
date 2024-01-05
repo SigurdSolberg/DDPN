@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 126, in <module>
+    training_loop.train(train_loader=train_loader, val_loader=val_loader, epochs=200, verbose=True)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/training_tools.py", line 102, in train
+    output = self.model(data)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/src/models.py", line 31, in forward
+    x = torch.mean(self.inner_transform(x), dim = -2)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/Users/sigurdrollsolberg/opt/anaconda3/envs/aml_2/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/sigurdrollsolberg/Documents/School/MasterPublication/DDPN/modenet.py", line 75, in forward
+    x = x - xm
+RuntimeError: The size of tensor a (256) must match the size of tensor b (3) at non-singleton dimension 3

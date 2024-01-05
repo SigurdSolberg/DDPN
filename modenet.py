@@ -20,7 +20,7 @@ from torch_geometric.loader import DataLoader
 device = torch.device('cpu')
 
 
-K = 1000
+K = 100
 M = 5
 DIM = 256
 

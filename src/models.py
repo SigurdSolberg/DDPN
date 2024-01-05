@@ -28,7 +28,7 @@ class DSSN(nn.Module):
             self.norm = SetBatchNorm()
 
     def forward(self:nn.Module, x) -> torch.Tensor: 
-        x = torch.sum(self.inner_transform(x), dim = -2)
+        x = torch.mean(self.inner_transform(x), dim = -2)
         x = self.norm(x)
         x = torch.mean(self.outer_transform(x), dim = -2)
         x = self.downstream_network(x)
